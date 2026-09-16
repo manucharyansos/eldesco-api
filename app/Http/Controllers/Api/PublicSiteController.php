@@ -22,6 +22,7 @@ class PublicSiteController extends Controller
 
         $navigation = Page::query()
             ->where('is_published', true)
+            ->where('show_in_nav', true)
             ->orderBy('sort_order')
             ->get(['id', 'slug', 'title'])
             ->map(fn (Page $page) => [
