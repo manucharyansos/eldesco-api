@@ -1,0 +1,14 @@
+/node_modules
+/vendor
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.idea/
+*.swp
+*.swo
+storage/logs/*
+bootstrap/cache/*
+public/hot
+public/storage

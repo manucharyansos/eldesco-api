@@ -1,0 +1,176 @@
+# ELDESCO API
+
+REST API backend for ELDESCO LLC website built with Laravel 11 and PostgreSQL.
+
+## Requirements
+
+- PHP 8.2+
+- Composer
+- PostgreSQL 12+
+- Node.js 18+ (for frontend)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/manucharyansos/eldesco-api.git
+cd eldesco-api
+```
+
+2. Install dependencies:
+```bash
+composer install
+```
+
+3. Setup environment:
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. Configure database in `.env`:
+```
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=eldesco_db
+DB_USERNAME=eldesco_user
+DB_PASSWORD=your_password
+```
+
+5. Run migrations:
+```bash
+php artisan migrate
+```
+
+6. (Optional) Seed initial data:
+```bash
+php artisan db:seed
+```
+
+## Running the Server
+
+Development:
+```bash
+php artisan serve
+```
+
+The API will be available at `http://localhost:8000/api`
+
+## API Endpoints
+
+### Public Endpoints
+
+- `GET /api/services` - Get all services
+- `GET /api/services/{id}` - Get service by ID
+- `GET /api/projects` - Get all projects
+- `GET /api/projects/{id}` - Get project by ID
+- `GET /api/team` - Get team members
+- `GET /api/team/{id}` - Get team member by ID
+- `GET /api/news` - Get news/blog posts (paginated)
+- `GET /api/news/{slug}` - Get news by slug
+- `GET /api/gallery` - Get gallery images
+- `GET /api/gallery/categories` - Get gallery categories
+
+Query Parameters:
+- `lang` - Language code (hy, en, ru) - default: en
+- `page` - Page number for paginated endpoints
+- `limit` - Items per page
+- `featured` - Filter projects by featured status (true/false)
+- `category` - Filter by category
+
+### Authentication
+
+- `POST /api/auth/register` - Register new admin user
+- `POST /api/auth/login` - Login (returns Sanctum token)
+- `POST /api/auth/logout` - Logout (requires token)
+- `GET /api/auth/me` - Get current user (requires token)
+- `POST /api/auth/refresh` - Refresh token (requires token)
+
+### Admin Endpoints (require authentication + admin role)
+
+#### Services Management
+- `POST /api/services` - Create service
+- `PUT /api/services/{id}` - Update service
+- `DELETE /api/services/{id}` - Delete service
+
+#### Projects Management
+- `POST /api/projects` - Create project
+- `PUT /api/projects/{id}` - Update project
+- `DELETE /api/projects/{id}` - Delete project
+
+#### Team Management
+- `POST /api/team` - Add team member
+- `PUT /api/team/{id}` - Update team member
+- `DELETE /api/team/{id}` - Delete team member
+
+#### News Management
+- `POST /api/news` - Create news post
+- `PUT /api/news/{id}` - Update news post
+- `DELETE /api/news/{id}` - Delete news post
+
+#### Gallery Management
+- `POST /api/gallery` - Add gallery image
+- `PUT /api/gallery/{id}` - Update gallery image
+- `DELETE /api/gallery/{id}` - Delete gallery image
+
+## Example Requests
+
+### Login
+```bash
+curl -X POST http://localhost:8000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@eldesco.am","password":"password123"}'
+```
+
+Response:
+```json
+{
+  "message": "Login successful",
+  "token": "1|abc123...",
+  "user": {
+    "id": 1,
+    "email": "admin@eldesco.am",
+    "name": "Admin User",
+    "role": "admin"
+  }
+}
+```
+
+### Get Services (with language)
+```bash
+curl http://localhost:8000/api/services?lang=hy
+```
+
+### Create Service (as admin)
+```bash
+curl -X POST http://localhost:8000/api/services \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title_hy": "Ցածր լարման համակարգեր",
+    "title_en": "Low Voltage Systems",
+    "description_hy": "Description in Armenian",
+    "icon": "bolt"
+  }'
+```
+
+## Structure
+
+- `app/Models/` - Eloquent models
+- `app/Http/Controllers/Api/` - API controllers
+- `database/migrations/` - Database schemas
+- `database/seeders/` - Database seeders
+- `routes/api.php` - API routes
+- `config/` - Configuration files
+
+## Security
+
+- Uses Laravel Sanctum for API token authentication
+- Password hashing with bcrypt
+- CORS configured for frontend domain
+- SQL injection protection via Eloquent ORM
+- CSRF protection on sensitive endpoints
+
+## License
+
+ELDESCO LLC © 2024. All rights reserved.
