@@ -1,71 +1,36 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\MediaController;
+use App\Http\Controllers\Api\Admin\PageController as AdminPageController;
+use App\Http\Controllers\Api\Admin\SettingController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\PublicSiteController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\{
-    AuthController,
-    ServiceController,
-    ProjectController,
-    TeamController,
-    NewsController,
-    GalleryController
-};
 
-// Public routes
-Route::post('/auth/register', [AuthController::class, 'register']);
-Route::post('/auth/login', [AuthController::class, 'login']);
+Route::get('/health', fn () => response()->json(['status' => 'ok']));
 
-// Public API endpoints
-Route::get('/services', [ServiceController::class, 'index']);
-Route::get('/services/{id}', [ServiceController::class, 'show']);
+Route::prefix('v1')->group(function () {
+    Route::get('/site', [PublicSiteController::class, 'site']);
+    Route::get('/pages', [PublicSiteController::class, 'pages']);
+    Route::get('/pages/{slug}', [PublicSiteController::class, 'page']);
 
-Route::get('/projects', [ProjectController::class, 'index']);
-Route::get('/projects/{id}', [ProjectController::class, 'show']);
+    Route::post('/admin/login', [AuthController::class, 'login']);
 
-Route::get('/team', [TeamController::class, 'index']);
-Route::get('/team/{id}', [TeamController::class, 'show']);
+    Route::middleware(['auth:sanctum', 'admin'])->prefix('admin')->group(function () {
+        Route::get('/me', [AuthController::class, 'me']);
+        Route::post('/logout', [AuthController::class, 'logout']);
 
-Route::get('/news', [NewsController::class, 'index']);
-Route::get('/news/{slugOrId}', [NewsController::class, 'show']);
+        Route::get('/pages', [AdminPageController::class, 'index']);
+        Route::post('/pages', [AdminPageController::class, 'store']);
+        Route::get('/pages/{page}', [AdminPageController::class, 'show']);
+        Route::put('/pages/{page}', [AdminPageController::class, 'update']);
+        Route::delete('/pages/{page}', [AdminPageController::class, 'destroy']);
 
-Route::get('/gallery', [GalleryController::class, 'index']);
-Route::get('/gallery/categories', [GalleryController::class, 'categories']);
+        Route::get('/settings', [SettingController::class, 'index']);
+        Route::put('/settings', [SettingController::class, 'update']);
 
-// Protected routes (require authentication)
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/auth/logout', [AuthController::class, 'logout']);
-    Route::get('/auth/me', [AuthController::class, 'me']);
-    Route::post('/auth/refresh', [AuthController::class, 'refreshToken']);
-
-    // Admin endpoints
-    Route::middleware('admin')->group(function () {
-        // Services
-        Route::post('/services', [ServiceController::class, 'store']);
-        Route::put('/services/{id}', [ServiceController::class, 'update']);
-        Route::delete('/services/{id}', [ServiceController::class, 'destroy']);
-
-        // Projects
-        Route::post('/projects', [ProjectController::class, 'store']);
-        Route::put('/projects/{id}', [ProjectController::class, 'update']);
-        Route::delete('/projects/{id}', [ProjectController::class, 'destroy']);
-
-        // Team
-        Route::post('/team', [TeamController::class, 'store']);
-        Route::put('/team/{id}', [TeamController::class, 'update']);
-        Route::delete('/team/{id}', [TeamController::class, 'destroy']);
-
-        // News
-        Route::post('/news', [NewsController::class, 'store']);
-        Route::put('/news/{id}', [NewsController::class, 'update']);
-        Route::delete('/news/{id}', [NewsController::class, 'destroy']);
-
-        // Gallery
-        Route::post('/gallery', [GalleryController::class, 'store']);
-        Route::put('/gallery/{id}', [GalleryController::class, 'update']);
-        Route::delete('/gallery/{id}', [GalleryController::class, 'destroy']);
+        Route::get('/media', [MediaController::class, 'index']);
+        Route::post('/media', [MediaController::class, 'store']);
+        Route::delete('/media/{media}', [MediaController::class, 'destroy']);
     });
-});
-
-// Fallback for health check
-Route::get('/health', function () {
-    return response()->json(['status' => 'ok']);
 });
