@@ -25,6 +25,7 @@ return new class extends Migration
             $table->json('title');
             $table->json('seo')->nullable();
             $table->boolean('is_published')->default(true);
+            $table->boolean('show_in_nav')->default(true);
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();
         });
