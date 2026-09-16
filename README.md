@@ -1,176 +1,75 @@
 # ELDESCO API
 
-REST API backend for ELDESCO LLC website built with Laravel 11 and PostgreSQL.
+Laravel 11 backend for the ELDESCO corporate website and admin-managed CMS.
+
+## What this backend controls
+
+- Public website pages and SEO metadata
+- Reorderable page sections
+- Armenian / English / Russian text stored in CMS JSON fields
+- Section images and gallery media
+- Header, footer, navigation, contact and brand settings
+- Existing projects, services, news, team and gallery CRUD
+- Sanctum token authentication for the admin panel
 
 ## Requirements
 
 - PHP 8.2+
-- Composer
-- PostgreSQL 12+
-- Node.js 18+ (for frontend)
+- Composer 2
+- PostgreSQL, MySQL or SQLite
 
-## Installation
+## Local setup
 
-1. Clone the repository:
-```bash
-git clone https://github.com/manucharyansos/eldesco-api.git
-cd eldesco-api
-```
-
-2. Install dependencies:
 ```bash
 composer install
-```
-
-3. Setup environment:
-```bash
 cp .env.example .env
 php artisan key:generate
-```
-
-4. Configure database in `.env`:
-```
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=eldesco_db
-DB_USERNAME=eldesco_user
-DB_PASSWORD=your_password
-```
-
-5. Run migrations:
-```bash
+# configure DB_* in .env
 php artisan migrate
-```
-
-6. (Optional) Seed initial data:
-```bash
 php artisan db:seed
-```
-
-## Running the Server
-
-Development:
-```bash
+php artisan db:seed --class=CmsSeeder
+php artisan storage:link
 php artisan serve
 ```
 
-The API will be available at `http://localhost:8000/api`
+The API runs at `http://localhost:8000/api` by default.
 
-## API Endpoints
+> Change the seeded admin password before production. The legacy DatabaseSeeder currently creates `admin@eldesco.am` with a development password.
 
-### Public Endpoints
+## CMS endpoints
 
-- `GET /api/services` - Get all services
-- `GET /api/services/{id}` - Get service by ID
-- `GET /api/projects` - Get all projects
-- `GET /api/projects/{id}` - Get project by ID
-- `GET /api/team` - Get team members
-- `GET /api/team/{id}` - Get team member by ID
-- `GET /api/news` - Get news/blog posts (paginated)
-- `GET /api/news/{slug}` - Get news by slug
-- `GET /api/gallery` - Get gallery images
-- `GET /api/gallery/categories` - Get gallery categories
+Public:
 
-Query Parameters:
-- `lang` - Language code (hy, en, ru) - default: en
-- `page` - Page number for paginated endpoints
-- `limit` - Items per page
-- `featured` - Filter projects by featured status (true/false)
-- `category` - Filter by category
+- `GET /api/pages`
+- `GET /api/pages/{slug}`
+- `GET /api/site-settings`
 
-### Authentication
+Authenticated admin:
 
-- `POST /api/auth/register` - Register new admin user
-- `POST /api/auth/login` - Login (returns Sanctum token)
-- `POST /api/auth/logout` - Logout (requires token)
-- `GET /api/auth/me` - Get current user (requires token)
-- `POST /api/auth/refresh` - Refresh token (requires token)
+- `GET|POST /api/admin/pages`
+- `GET|PUT|DELETE /api/admin/pages/{page}` / page slug lookup for GET
+- `POST /api/admin/pages/{page}/sections`
+- `PUT|DELETE /api/admin/pages/{page}/sections/{section}`
+- `POST /api/admin/pages/{page}/sections/reorder`
+- `GET /api/admin/site-settings`
+- `PUT /api/admin/site-settings/{key}`
+- `POST /api/admin/media`
 
-### Admin Endpoints (require authentication + admin role)
+## Content seeded from the company presentation
 
-#### Services Management
-- `POST /api/services` - Create service
-- `PUT /api/services/{id}` - Update service
-- `DELETE /api/services/{id}` - Delete service
+`CmsSeeder` creates the public structure for:
 
-#### Projects Management
-- `POST /api/projects` - Create project
-- `PUT /api/projects/{id}` - Update project
-- `DELETE /api/projects/{id}` - Delete project
+- Home
+- About ELDESCO
+- Low- and medium-voltage power infrastructure
+- Industrial production infrastructure
+- Refrigeration and cooling
+- LED display systems
+- Full-cycle sheet metal processing
+- Contact
 
-#### Team Management
-- `POST /api/team` - Add team member
-- `PUT /api/team/{id}` - Update team member
-- `DELETE /api/team/{id}` - Delete team member
+It also creates global navigation and contact settings. The initial content follows the supplied ELDESCO company presentation, while every text and media field can then be changed from the admin CMS.
 
-#### News Management
-- `POST /api/news` - Create news post
-- `PUT /api/news/{id}` - Update news post
-- `DELETE /api/news/{id}` - Delete news post
+## Production notes
 
-#### Gallery Management
-- `POST /api/gallery` - Add gallery image
-- `PUT /api/gallery/{id}` - Update gallery image
-- `DELETE /api/gallery/{id}` - Delete gallery image
-
-## Example Requests
-
-### Login
-```bash
-curl -X POST http://localhost:8000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"admin@eldesco.am","password":"password123"}'
-```
-
-Response:
-```json
-{
-  "message": "Login successful",
-  "token": "1|abc123...",
-  "user": {
-    "id": 1,
-    "email": "admin@eldesco.am",
-    "name": "Admin User",
-    "role": "admin"
-  }
-}
-```
-
-### Get Services (with language)
-```bash
-curl http://localhost:8000/api/services?lang=hy
-```
-
-### Create Service (as admin)
-```bash
-curl -X POST http://localhost:8000/api/services \
-  -H "Authorization: Bearer YOUR_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title_hy": "Ցածր լարման համակարգեր",
-    "title_en": "Low Voltage Systems",
-    "description_hy": "Description in Armenian",
-    "icon": "bolt"
-  }'
-```
-
-## Structure
-
-- `app/Models/` - Eloquent models
-- `app/Http/Controllers/Api/` - API controllers
-- `database/migrations/` - Database schemas
-- `database/seeders/` - Database seeders
-- `routes/api.php` - API routes
-- `config/` - Configuration files
-
-## Security
-
-- Uses Laravel Sanctum for API token authentication
-- Password hashing with bcrypt
-- CORS configured for frontend domain
-- SQL injection protection via Eloquent ORM
-- CSRF protection on sensitive endpoints
-
-## License
-
-ELDESCO LLC © 2024. All rights reserved.
+Use a real `APP_KEY`, disable debug, configure `APP_URL`, set the frontend origin in `CORS_ALLOWED_ORIGINS`, configure your production database, and make `storage` plus `bootstrap/cache` writable. Run migrations, seed the CMS once on a fresh installation, and create the public storage symlink.
