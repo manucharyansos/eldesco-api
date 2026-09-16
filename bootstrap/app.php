@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Middleware\AdminToken;
 use App\Http\Middleware\CorsMiddleware;
+use App\Http\Middleware\EnsureAdmin;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -14,9 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->append(CorsMiddleware::class);
         $middleware->alias([
-            'admin.token' => AdminToken::class,
+            'admin' => EnsureAdmin::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        // API errors are rendered as JSON by Laravel when the request expects JSON.
+        // API errors are rendered as JSON when the request expects JSON.
     })->create();
