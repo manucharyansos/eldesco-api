@@ -13,8 +13,7 @@ use App\Http\Controllers\Api\{
     MediaController
 };
 
-// Authentication
-Route::post('/auth/register', [AuthController::class, 'register']);
+// Authentication. Admin accounts are created by seeder / server operator, not publicly.
 Route::post('/auth/login', [AuthController::class, 'login']);
 
 // Public CMS
@@ -47,9 +46,9 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('/admin/pages/{page}', [PageController::class, 'update']);
         Route::delete('/admin/pages/{page}', [PageController::class, 'destroy']);
         Route::post('/admin/pages/{page}/sections', [PageController::class, 'upsertSection']);
+        Route::post('/admin/pages/{page}/sections/reorder', [PageController::class, 'reorderSections']);
         Route::put('/admin/pages/{page}/sections/{section}', [PageController::class, 'upsertSection']);
         Route::delete('/admin/pages/{page}/sections/{section}', [PageController::class, 'deleteSection']);
-        Route::post('/admin/pages/{page}/sections/reorder', [PageController::class, 'reorderSections']);
 
         // Global header/footer/contact/company settings
         Route::get('/admin/site-settings', [SiteSettingController::class, 'index']);
