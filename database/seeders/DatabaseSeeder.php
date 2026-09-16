@@ -2,11 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Service;
-use App\Models\Project;
-use App\Models\TeamMember;
-use App\Models\News;
-use App\Models\Gallery;
+use App\Models\Page;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -15,238 +12,176 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Create admin user
-        User::create([
-            'email' => 'admin@eldesco.am',
-            'name' => 'Admin',
-            'password_hash' => Hash::make('password123'),
-            'role' => 'admin'
-        ]);
+        User::updateOrCreate(
+            ['email' => env('ADMIN_EMAIL', 'admin@eldesco.am')],
+            [
+                'name' => 'ELDESCO Admin',
+                'password_hash' => Hash::make(env('ADMIN_PASSWORD', 'please-change-this-password')),
+                'role' => 'admin',
+            ]
+        );
 
-        // Services
-        Service::create([
-            'title_hy' => 'Ցածր և միջին լարման Էներգետիկ ենթակառուցվածքներ',
-            'title_en' => 'Low- and Medium-Voltage Power Infrastructure',
-            'title_ru' => 'Низкое и среднее напряжение',
-            'description_hy' => 'Միջին լարման ենթակայաններ, բաշխիչ վահանակներ և հաղորդադեղերի ամբողջական համակարգեր',
-            'description_en' => 'Medium-voltage substations, distribution panels, and complete power transmission systems',
-            'description_ru' => 'Подстанции среднего напряжения, распределительные панели и полные системы передачи электроэнергии',
-            'icon' => '⚡',
-            'order_index' => 1
-        ]);
+        $this->seedSettings();
+        $this->seedPages();
+    }
 
-        Service::create([
-            'title_hy' => 'Արտադրական ենթակառուցվածքներ',
-            'title_en' => 'Industrial Production Infrastructure',
-            'title_ru' => 'Производственная инфраструктура',
-            'description_hy' => 'Սեղմած օդի կայաններ, պոմպակայաններ, SCADA ավտոմատացված համակարգեր',
-            'description_en' => 'Compressed air stations, pumping stations, and SCADA automated control systems',
-            'description_ru' => 'Станции сжатого воздуха, насосные станции и автоматизированные системы SCADA',
-            'icon' => '🏭',
-            'order_index' => 2
-        ]);
+    private function seedSettings(): void
+    {
+        $settings = [
+            ['key' => 'site.name', 'group' => 'site', 'value' => 'ELDESCO', 'is_public' => true],
+            ['key' => 'site.tagline', 'group' => 'site', 'value' => $this->t('Էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծում և պատրաստում', 'Design and manufacturing of energy infrastructure and engineering systems'), 'is_public' => true],
+            ['key' => 'site.primary_color', 'group' => 'appearance', 'value' => '#0B2947', 'is_public' => true],
+            ['key' => 'site.accent_color', 'group' => 'appearance', 'value' => '#C85A2B', 'is_public' => true],
+            ['key' => 'contact.address', 'group' => 'contact', 'value' => $this->t('ՀՀ, ք. Երևան, Թբիլիսյան 35/9', '35/9 Tbilisyan Hwy, Yerevan, Armenia'), 'is_public' => true],
+            ['key' => 'contact.phone', 'group' => 'contact', 'value' => '+37499694569', 'is_public' => true],
+            ['key' => 'contact.email', 'group' => 'contact', 'value' => 'eldesco@eldesco.am', 'is_public' => true],
+            ['key' => 'company.founded', 'group' => 'company', 'value' => '2011', 'is_public' => true],
+            ['key' => 'company.legal_name', 'group' => 'company', 'value' => $this->t('ԷԼԴԵՍՔՈ ՍՊԸ', 'ELDESCO LLC'), 'is_public' => true],
+        ];
 
-        Service::create([
-            'title_hy' => 'Լուսադիոդային էկրաններ',
-            'title_en' => 'LED Display Systems',
-            'title_ru' => 'Системы светодиодных дисплеев',
-            'description_hy' => 'Բարձր ճշգրտության LED էկրաններ ցանկացած չափի և տեղադրման համար',
-            'description_en' => 'High-precision LED displays of any size and configuration',
-            'description_ru' => 'Высокоточные светодиодные дисплеи любого размера',
-            'icon' => '📺',
-            'order_index' => 3
-        ]);
-
-        Service::create([
-            'title_hy' => 'Սառնարանային սարքավորումներ',
-            'title_en' => 'Refrigeration Equipment',
-            'title_ru' => 'Холодильное оборудование',
-            'description_hy' => 'Ժամանակակից սառնարանային համակարգեր և սարքավորումներ ամբողջ շրջանակ',
-            'description_en' => 'Modern refrigeration systems and equipment for all applications',
-            'description_ru' => 'Современные системы охлаждения для всех приложений',
-            'icon' => '❄️',
-            'order_index' => 4
-        ]);
-
-        Service::create([
-            'title_hy' => 'Թիթեղային մետաղի մշակում',
-            'title_en' => 'Sheet Metal Processing',
-            'title_ru' => 'Обработка листового металла',
-            'description_hy' => 'Ամբողջական ցիկլ թիթեղային մետաղի մշակման համար բարձր ճշգրտության սարքավորումներ',
-            'description_en' => 'Full-cycle sheet metal processing with precision machinery',
-            'description_ru' => 'Полный цикл обработки листового металла на современном оборудовании',
-            'icon' => '🔧',
-            'order_index' => 5
-        ]);
-
-        // Projects/Case Studies
-        Project::create([
-            'title_hy' => '3200 կՎ հզորությամբ միջին լարման ենթակայաններ',
-            'title_en' => 'Medium Voltage Substations - 3200 kW Capacity',
-            'title_ru' => 'Подстанции среднего напряжения мощностью 3200 кВ',
-            'description_hy' => 'Պրոֆեսիոնալ մեծ հզորության ենթակայաններ տեղադրված մեծ արտադրական հաստիքներում',
-            'description_en' => 'Professional high-capacity substations installed in major industrial facilities',
-            'description_ru' => 'Профессиональные высокомощные подстанции, установленные на крупных промышленных объектах',
-            'category' => 'Infrastructure',
-            'featured' => true,
-            'order_index' => 1
-        ]);
-
-        Project::create([
-            'title_hy' => 'Սեղմած օդի մատակարարման համակարգեր',
-            'title_en' => 'Compressed Air Supply Systems',
-            'title_ru' => 'Системы подачи сжатого воздуха',
-            'description_hy' => 'Մեծ ծավալի օդի մատակարարման համակարգեր խողովակաշարի ամբողջական հավաքածուով',
-            'description_en' => 'Large-volume air supply systems with complete pipeline infrastructure',
-            'description_ru' => 'Системы подачи воздуха большого объема с полной инфраструктурой трубопроводов',
-            'category' => 'Systems',
-            'featured' => true,
-            'order_index' => 2
-        ]);
-
-        Project::create([
-            'title_hy' => 'SCADA ավտոմատացված կառավարման համակարգեր',
-            'title_en' => 'SCADA Automation Control Systems',
-            'title_ru' => 'Автоматизированные системы управления SCADA',
-            'description_hy' => 'Siemens STEP 7-ի վրա հիմնված հեռավար վերահսկման ամբողջական համակարգեր',
-            'description_en' => 'Complete remote monitoring and control systems based on Siemens STEP 7',
-            'description_ru' => 'Полные системы удаленного мониторинга и управления на базе Siemens STEP 7',
-            'category' => 'Automation',
-            'featured' => false,
-            'order_index' => 3
-        ]);
-
-        Project::create([
-            'title_hy' => 'LED ցուցադրման պլատֆորմեր',
-            'title_en' => 'LED Display Platforms',
-            'title_ru' => 'Платформы светодиодных дисплеев',
-            'description_hy' => 'Մեծ մասշտաբի LED էկրաններ օդրենի տարածքներում և պետական հաստիքներում',
-            'description_en' => 'Large-scale LED screens installed in outdoor spaces and public facilities',
-            'description_ru' => 'Крупномасштабные светодиодные экраны, установленные на открытых пространствах',
-            'category' => 'Display',
-            'featured' => true,
-            'order_index' => 4
-        ]);
-
-        Project::create([
-            'title_hy' => 'Սառնարանային կազմերի ներդրում',
-            'title_en' => 'Refrigeration System Implementation',
-            'title_ru' => 'Внедрение систем охлаждения',
-            'description_hy' => 'Բարձր տեխնոլոգիայի սառնարանային համակարգեր խոշոր հաստիքներում',
-            'description_en' => 'High-tech refrigeration systems in large-scale industrial facilities',
-            'description_ru' => 'Высокотехнологичные системы охлаждения в крупных промышленных объектах',
-            'category' => 'Equipment',
-            'featured' => false,
-            'order_index' => 5
-        ]);
-
-        // Team Members
-        TeamMember::create([
-            'name_hy' => 'Վահե Պարսամյան',
-            'name_en' => 'Vahe Parsamyan',
-            'name_ru' => 'Ваге Парсамян',
-            'position_hy' => 'Տնօրեն',
-            'position_en' => 'CEO/Director',
-            'position_ru' => 'Генеральный директор',
-            'email' => 'vahe@eldesco.am',
-            'order_index' => 1
-        ]);
-
-        TeamMember::create([
-            'name_hy' => 'Վահրամ Կիկոյան',
-            'name_en' => 'Vahram Kikoyan',
-            'name_ru' => 'Варам Киkoян',
-            'position_hy' => 'Գլխավոր հաշվապահ',
-            'position_en' => 'Chief Accountant',
-            'position_ru' => 'Главный бухгалтер',
-            'email' => 'vahram@eldesco.am',
-            'order_index' => 2
-        ]);
-
-        // News/Blog
-        News::create([
-            'title_hy' => 'ELDESCO LLC-ի մասին',
-            'title_en' => 'About ELDESCO LLC',
-            'title_ru' => 'О компании ELDESCO LLC',
-            'slug_hy' => 'eldesco-mashin',
-            'slug_en' => 'about-eldesco',
-            'slug_ru' => 'o-eldesco',
-            'content_hy' => 'ELDESCO LLC հիմնադրվել է 2011թ-ին: Գործունեության ծավալման ընթացում մեր ընկերությունը համագործակցել է հարյուրավոր փոքր, միջին, ինչպես նաև խոշոր տնտեսավարողների հետ, ինչը դարձել է շարունակական՝ մատուցված ծառայության բարձր որակի շնորհիվ:',
-            'content_en' => 'ELDESCO LLC was established in 2011. Throughout its operational growth, the company has partnered with hundreds of small, medium, and large enterprises, building long-term collaborations driven by the consistently high quality of its services.',
-            'content_ru' => 'Компания ELDESCO LLC была основана в 2011 году. За время своего развития компания сотрудничала с сотнями малых, средних и крупных предприятий, создавая долгосрочные партнерства благодаря высокому качеству предоставляемых услуг.',
-            'excerpt_hy' => 'ELDESCO LLC - բարձր որակի ինժեներական լուծումների տնտեսավար',
-            'excerpt_en' => 'ELDESCO LLC - provider of high-quality engineering solutions',
-            'excerpt_ru' => 'ELDESCO LLC - поставщик высококачественных инженерных решений',
-            'published' => true,
-        ]);
-
-        News::create([
-            'title_hy' => 'Նոր մետաղամշակման բաժնի հիմնում',
-            'title_en' => 'Launch of New Metal Processing Division',
-            'title_ru' => 'Запуск нового отделения обработки металла',
-            'slug_hy' => 'metal-baghin-himnum',
-            'slug_en' => 'metal-division-launch',
-            'slug_ru' => 'zapusk-odelenia-metalla',
-            'content_hy' => 'Արտադրական հնարավորությունների ընդլայնման նպատակով 2023 թվականին ընկերությունը հիմնեց մետաղամշակման առանձին ուղղություն (Metalworks LLC): Կարճ ժամանակահատվածում այն դիրքավորվեց որպես ոլորտի առաջատարներից մեկը Հայաստանի Հանրապետությունում:',
-            'content_en' => 'In 2023, with the aim of expanding its production capabilities, the company established a dedicated metal processing division (Metalworks LLC). Within a short period, it positioned itself among the industry leaders in the Republic of Armenia.',
-            'content_ru' => 'В 2023 году с целью расширения производственных возможностей компания открыла отдельное отделение обработки металла (Metalworks LLC). За короткий период оно позиционировало себя как один из лидеров отрасли в Республике Армения.',
-            'excerpt_hy' => 'Նոր ուղղություն մետաղամշակման ոլորտում',
-            'excerpt_en' => 'New direction in metal processing',
-            'excerpt_ru' => 'Новое направление в обработке металла',
-            'published' => true,
-        ]);
-
-        News::create([
-            'title_hy' => 'Գիտահետազոտական ուղղության ծայտանում',
-            'title_en' => 'Research & Development Division Expansion',
-            'title_ru' => 'Расширение отдела НИОКР',
-            'slug_hy' => 'gitahatazocakan',
-            'slug_en' => 'research-development',
-            'slug_ru' => 'nauchnie-razrabotki',
-            'content_hy' => 'ELDESCO LLC-ի առանձնակի ուղղություններից մեկն է գիտահետազոտական ուղղությունը՝ որը առաջարկում է մեծ չափերի լազերային բյուրեղների, արհեստական թանկարժեք քարերի արտադրություն:',
-            'content_en' => 'One of ELDESCO LLC\'s distinctive directions is its research and development division, specializing in the production of large-size laser crystals and synthetic precious stones.',
-            'content_ru' => 'Одно из отличительных направлений деятельности ELDESCO LLC - отдел научных исследований и разработок, специализирующийся на производстве лазерных кристаллов большого размера и синтетических драгоценных камней.',
-            'excerpt_hy' => 'Նոր գիտական հայտնագործություններ',
-            'excerpt_en' => 'New scientific innovations',
-            'excerpt_ru' => 'Новые научные инновации',
-            'published' => true,
-        ]);
-
-        // Gallery - using relative paths for images (assuming they'll be uploaded)
-        for ($i = 0; $i < 5; $i++) {
-            Gallery::create([
-                'title_hy' => 'Ենթակայաններ և հաղորդադեղեր',
-                'title_en' => 'Substations and Infrastructure',
-                'title_ru' => 'Подстанции и инфраструктура',
-                'image_url' => '/images/projects/substation-' . ($i + 1) . '.jpg',
-                'thumbnail_url' => '/images/projects/thumb-substation-' . ($i + 1) . '.jpg',
-                'category' => 'Infrastructure',
-                'order_index' => $i + 1
-            ]);
+        foreach ($settings as $setting) {
+            Setting::updateOrCreate(['key' => $setting['key']], $setting);
         }
+    }
 
-        for ($i = 0; $i < 4; $i++) {
-            Gallery::create([
-                'title_hy' => 'LED էկրաններ',
-                'title_en' => 'LED Displays',
-                'title_ru' => 'LED Дисплеи',
-                'image_url' => '/images/projects/led-' . ($i + 1) . '.jpg',
-                'thumbnail_url' => '/images/projects/thumb-led-' . ($i + 1) . '.jpg',
-                'category' => 'LED',
-                'order_index' => $i + 5
-            ]);
-        }
+    private function seedPages(): void
+    {
+        $activityItems = [
+            $this->item('power', 'Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ', 'Low- and Medium-Voltage Power Infrastructure Solutions', '/power-infrastructure'),
+            $this->item('industrial', 'Արտադրական ենթակառուցվածքներ', 'Industrial Production Infrastructure', '/industrial-infrastructure'),
+            $this->item('led', 'Լուսադիոդային էկրաններ', 'LED Display Systems', '/led-displays'),
+            $this->item('cooling', 'Սառնարանային սարքավորումներ', 'Refrigeration and Cooling Equipment', '/refrigeration'),
+            $this->item('metal', 'Թիթեղային մետաղի մշակման ամբողջական ցիկլ', 'Full-Cycle Sheet Metal Processing', '/sheet-metal'),
+        ];
 
-        for ($i = 0; $i < 3; $i++) {
-            Gallery::create([
-                'title_hy' => 'Մետաղամշակում',
-                'title_en' => 'Metal Processing',
-                'title_ru' => 'Обработка металла',
-                'image_url' => '/images/projects/metalworks-' . ($i + 1) . '.jpg',
-                'thumbnail_url' => '/images/projects/thumb-metalworks-' . ($i + 1) . '.jpg',
-                'category' => 'Metalworks',
-                'order_index' => $i + 9
-            ]);
+        $this->page('home', 'Գլխավոր', 'Home', 0, true, [
+            $this->section('hero', 'hero', 'Էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծում և պատրաստում', 'Design and manufacturing of energy infrastructure and engineering systems', 'Էլդեսքո ՍՊԸ-ն հիմնադրվել է 2011թ-ին։ Մենք իրականացնում ենք էներգետիկ և արտադրական ենթակառուցվածքների նախագծում, պատրաստում և ներդրում։', 'ELDESCO LLC was established in 2011. We design, manufacture and implement energy and industrial infrastructure solutions.'),
+            $this->section('activities', 'cards', 'Գործունեության ոլորտները', 'Areas of activity', null, null, $activityItems),
+            $this->section('quality', 'rich_text', 'Փորձ և որակ', 'Experience and quality', 'Գործունեության ծավալման ընթացքում ընկերությունը համագործակցել է հարյուրավոր փոքր, միջին և խոշոր տնտեսավարողների հետ՝ ձևավորելով շարունակական համագործակցություն մատուցված ծառայությունների բարձր որակի շնորհիվ։', 'Throughout its operational growth, the company has partnered with hundreds of small, medium and large enterprises, building long-term collaborations driven by the consistently high quality of its services.'),
+            $this->section('customers', 'logos', 'Մեր պատվիրատուները', 'Our customers', null, null, [
+                $this->item('apache', 'Apache', 'Apache'),
+                $this->item('dalma', 'Dalma Garden Mall', 'Dalma Garden Mall'),
+                $this->item('solar-city', 'Solar City', 'Solar City'),
+                $this->item('teghout', 'Teghout', 'Teghout'),
+                $this->item('viva-mts', 'Viva-MTS', 'Viva-MTS'),
+                $this->item('veon', 'VEON', 'VEON'),
+                $this->item('team', 'Team Telecom Armenia', 'Team Telecom Armenia'),
+                $this->item('armenia-wine', 'Armenia Wine', 'Armenia Wine'),
+                $this->item('synopsys', 'Synopsys', 'Synopsys'),
+                $this->item('synergy', 'Synergy International Systems', 'Synergy International Systems'),
+                $this->item('dilijan', 'Dilijan Beer', 'Dilijan Beer'),
+                $this->item('astra', 'Astra Crystals', 'Astra Crystals'),
+            ]),
+            $this->section('contact-cta', 'cta', 'Քննարկենք ձեր նախագիծը', 'Let’s discuss your project', 'Կապվեք մեզ հետ՝ տեխնիկական առաջադրանքը քննարկելու համար։', 'Contact us to discuss your technical requirements.', [], ['button' => $this->t('Կապ մեզ հետ', 'Contact us'), 'href' => '/contact']),
+        ]);
+
+        $this->page('about', 'Մեր մասին', 'About', 1, true, [
+            $this->section('hero', 'hero', 'ԷլԴեսՔո-ի մասին', 'About ELDESCO', 'Էլդեսքո ՍՊԸ-ն հիմնադրվել է 2011թ-ին։', 'ELDESCO LLC was established in 2011.'),
+            $this->section('history', 'rich_text', 'Մեր փորձը', 'Our experience', 'Գործունեության ծավալման ընթացքում մեր ընկերությունը համագործակցել է հարյուրավոր փոքր, միջին, ինչպես նաև խոշոր տնտեսավարողների հետ, ինչը դարձել է շարունակական՝ մատուցված ծառայության բարձր որակի շնորհիվ։', 'Throughout its operational growth, the company has partnered with hundreds of small, medium, and large enterprises, building long-term collaborations driven by the consistently high quality of its services.'),
+            $this->section('metalworks', 'rich_text', 'Մետաղամշակման ուղղություն', 'Metal processing division', 'Արտադրական հնարավորությունների ընդլայնման նպատակով 2023 թվականին ընկերությունը հիմնեց մետաղամշակման առանձին ուղղություն՝ «Մեթալորքս» ՍՊԸ։ Արտասահմանյան գործընկերների հետ համագործակցության արդյունքում ընկերությունը համալրվել է մետաղի մշակման ժամանակակից, բարձր ճշգրտության սարքավորումներով, որոնց մի մասը եզակի է ՀՀ-ում։', 'In 2023, with the aim of expanding its production capabilities, the company established a dedicated metal processing division, Metalworks LLC. Through cooperation with international partners, the company has been equipped with advanced, high-precision metal processing machinery, some of which is unique within Armenia.'),
+            $this->section('research', 'rich_text', 'Գիտահետազոտական ուղղություն', 'Research and development', 'Էլդեսքո ՍՊԸ-ի առանձնակի ուղղություններից մեկն է գիտահետազոտական ուղղությունը, որը առաջարկում է մեծ չափերի լազերային բյուրեղների և արհեստական թանկարժեք քարերի արտադրություն։', 'One of ELDESCO LLC’s distinctive directions is its research and development division, specializing in the production of large-size laser crystals and synthetic precious stones.'),
+        ]);
+
+        $this->page('activities', 'Գործունեություն', 'Activities', 2, true, [
+            $this->section('hero', 'hero', 'Գործունեության ոլորտները', 'Areas of activity'),
+            $this->section('activity-list', 'cards', 'Ինժեներական լուծումներ', 'Engineering solutions', null, null, $activityItems),
+        ]);
+
+        $this->page('contact', 'Կապ', 'Contact', 3, true, [
+            $this->section('hero', 'hero', 'Կապ մեզ հետ', 'Contact us'),
+            $this->section('contact', 'contact', 'Կոնտակտային տվյալներ', 'Contact information', 'ՀՀ, ք. Երևան, Թբիլիսյան 35/9\n+374 99 694569\neldesco@eldesco.am', '35/9 Tbilisyan Hwy, Yerevan, Armenia\n+374 99 694569\neldesco@eldesco.am'),
+        ]);
+
+        $this->page('power-infrastructure', 'Էներգետիկ ենթակառուցվածքներ', 'Power Infrastructure', 100, false, [
+            $this->section('hero', 'hero', 'Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ', 'Low- and Medium-Voltage Power Infrastructure'),
+            $this->section('services', 'list', 'Լուծումներ', 'Solutions', null, null, [
+                $this->item('substations', 'Միջին լարման ենթակայաններ', 'Medium-voltage substations'),
+                $this->item('panels', 'Ցածր և միջին լարման բաշխիչ վահանակներ', 'Low- and medium-voltage distribution panels'),
+                $this->item('transmission', 'Ցածր լարման էներգիայի տեղափոխում (հաղորդադողեր, մալուխներ)', 'Low-voltage power transmission systems (busbars and cable networks)'),
+                $this->item('converters', 'Ցածր և միջին լարման հաճախային փոխակերպիչներ, շարժիչի փափուկ գործարկման համակարգեր (մոնտաժ)', 'Installation of low- and medium-voltage frequency converters and motor soft starter systems'),
+            ]),
+            $this->section('gallery', 'gallery', 'Կատարված աշխատանքներ', 'Selected work'),
+        ]);
+
+        $this->page('industrial-infrastructure', 'Արտադրական ենթակառուցվածքներ', 'Industrial Infrastructure', 101, false, [
+            $this->section('hero', 'hero', 'Արտադրական ենթակառուցվածքներ', 'Industrial Production Infrastructure Solutions'),
+            $this->section('services', 'list', 'Լուծումներ', 'Solutions', null, null, [
+                $this->item('air', 'Սեղմած օդի մատակարարման կայաններ, խողովակաշարեր', 'Compressed air supply stations and pipeline systems'),
+                $this->item('pumps', 'Պոմպակայաններ, չժ պողպատից խողովակաշար', 'Pumping stations and stainless steel pipeline systems'),
+                $this->item('scada', 'SCADA՝ Siemens STEP 7-ի հիման վրա', 'SCADA automated systems based on the Siemens STEP 7 platform'),
+            ]),
+            $this->section('gallery', 'gallery', 'Կատարված աշխատանքներ', 'Selected work'),
+        ]);
+
+        $this->page('refrigeration', 'Սառնարանային սարքավորումներ', 'Refrigeration and Cooling Equipment', 102, false, [
+            $this->section('hero', 'hero', 'Սառնարանային սարքավորումներ', 'Refrigeration and Cooling Equipment'),
+            $this->section('gallery', 'gallery', 'Կատարված աշխատանքներ', 'Selected work'),
+        ]);
+
+        $this->page('led-displays', 'Լուսադիոդային էկրաններ', 'LED Display Systems', 103, false, [
+            $this->section('hero', 'hero', 'Լուսադիոդային էկրաններ', 'LED Display Systems'),
+            $this->section('gallery', 'gallery', 'Կատարված աշխատանքներ', 'Selected work'),
+        ]);
+
+        $this->page('sheet-metal', 'Թիթեղային մետաղի մշակում', 'Sheet Metal Manufacturing', 104, false, [
+            $this->section('hero', 'hero', 'Թիթեղային մետաղի մշակման ամբողջական ցիկլ', 'Full-Cycle Sheet Metal Manufacturing'),
+            $this->section('gallery', 'gallery', 'Արտադրական հնարավորություններ', 'Manufacturing capabilities'),
+        ]);
+    }
+
+    private function page(string $slug, string $hy, string $en, int $sortOrder, bool $showInNav, array $sections): void
+    {
+        $page = Page::updateOrCreate(
+            ['slug' => $slug],
+            [
+                'title' => $this->t($hy, $en),
+                'seo' => [
+                    'title' => $this->t($hy.' | ELDESCO', $en.' | ELDESCO'),
+                    'description' => $this->t('ELDESCO ինժեներական և էներգետիկ լուծումներ', 'ELDESCO engineering and energy infrastructure solutions'),
+                ],
+                'is_published' => true,
+                'show_in_nav' => $showInNav,
+                'sort_order' => $sortOrder,
+            ]
+        );
+
+        $page->sections()->delete();
+        foreach ($sections as $sectionIndex => $data) {
+            $items = $data['items'] ?? [];
+            unset($data['items']);
+            $section = $page->sections()->create($data + ['sort_order' => $sectionIndex]);
+
+            foreach ($items as $itemIndex => $item) {
+                $section->items()->create($item + ['sort_order' => $itemIndex]);
+            }
         }
+    }
+
+    private function section(string $key, string $type, string $titleHy, string $titleEn, ?string $bodyHy = null, ?string $bodyEn = null, array $items = [], array $settings = []): array
+    {
+        return [
+            'key' => $key,
+            'type' => $type,
+            'title' => $this->t($titleHy, $titleEn),
+            'body' => ($bodyHy !== null || $bodyEn !== null) ? $this->t($bodyHy ?? '', $bodyEn ?? '') : null,
+            'settings' => $settings,
+            'is_enabled' => true,
+            'items' => $items,
+        ];
+    }
+
+    private function item(string $key, string $hy, string $en, ?string $link = null): array
+    {
+        return [
+            'key' => $key,
+            'title' => $this->t($hy, $en),
+            'link_url' => $link,
+            'is_enabled' => true,
+        ];
+    }
+
+    private function t(string $hy, string $en): array
+    {
+        return ['hy' => $hy, 'en' => $en, 'ru' => ''];
     }
 }
