@@ -32,6 +32,7 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{slugOrId}', [NewsController::class, 'show']);
 Route::get('/gallery', [GalleryController::class, 'index']);
 Route::get('/gallery/categories', [GalleryController::class, 'categories']);
+Route::get('/gallery/{id}', [GalleryController::class, 'show']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/auth/logout', [AuthController::class, 'logout']);
@@ -39,7 +40,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/auth/refresh', [AuthController::class, 'refreshToken']);
 
     Route::middleware('admin')->group(function () {
-        // CMS pages and sections
         Route::get('/admin/pages', [PageController::class, 'index']);
         Route::get('/admin/pages/{slug}', [PageController::class, 'show']);
         Route::post('/admin/pages', [PageController::class, 'store']);
@@ -50,13 +50,11 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('/admin/pages/{page}/sections/{section}', [PageController::class, 'upsertSection']);
         Route::delete('/admin/pages/{page}/sections/{section}', [PageController::class, 'deleteSection']);
 
-        // Global header/footer/contact/company settings
         Route::get('/admin/site-settings', [SiteSettingController::class, 'index']);
         Route::put('/admin/site-settings/{key}', [SiteSettingController::class, 'upsert']);
         Route::delete('/admin/site-settings/{key}', [SiteSettingController::class, 'destroy']);
         Route::post('/admin/media', [MediaController::class, 'store']);
 
-        // Legacy CRUD
         Route::post('/services', [ServiceController::class, 'store']);
         Route::put('/services/{id}', [ServiceController::class, 'update']);
         Route::delete('/services/{id}', [ServiceController::class, 'destroy']);
