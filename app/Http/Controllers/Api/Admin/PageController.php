@@ -14,12 +14,9 @@ class PageController extends Controller
 {
     public function index(): JsonResponse
     {
-        $pages = Page::query()
-            ->withCount('sections')
-            ->orderBy('sort_order')
-            ->get();
-
-        return response()->json($pages);
+        return response()->json(
+            Page::query()->withCount('sections')->orderBy('sort_order')->get()
+        );
     }
 
     public function store(Request $request): JsonResponse
@@ -32,6 +29,7 @@ class PageController extends Controller
                 'title' => $data['title'],
                 'seo' => $data['seo'] ?? [],
                 'is_published' => $data['is_published'] ?? true,
+                'show_in_nav' => $data['show_in_nav'] ?? true,
                 'sort_order' => $data['sort_order'] ?? 0,
             ]);
 
@@ -57,6 +55,7 @@ class PageController extends Controller
                 'title' => $data['title'],
                 'seo' => $data['seo'] ?? [],
                 'is_published' => $data['is_published'] ?? true,
+                'show_in_nav' => $data['show_in_nav'] ?? true,
                 'sort_order' => $data['sort_order'] ?? 0,
             ]);
 
@@ -90,6 +89,7 @@ class PageController extends Controller
             'title.ru' => ['nullable', 'string'],
             'seo' => ['nullable', 'array'],
             'is_published' => ['nullable', 'boolean'],
+            'show_in_nav' => ['nullable', 'boolean'],
             'sort_order' => ['nullable', 'integer', 'min:0'],
             'sections' => ['nullable', 'array'],
             'sections.*.key' => ['required_with:sections', 'string', 'max:120'],
