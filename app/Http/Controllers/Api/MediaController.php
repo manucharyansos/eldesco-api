@@ -42,7 +42,8 @@ class MediaController extends Controller
 
         return response()->json([
             'id' => $id,
-            'url' => $path,
+            'url' => url($path),
+            'path' => $path,
             'filename' => $file->getClientOriginalName(),
         ], 201);
     }
