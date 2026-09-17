@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\{
     AuthController, ServiceController, ProjectController, TeamController,
-    NewsController, GalleryController, PageController
+    NewsController, GalleryController, PageController, MediaController
 };
 
 Route::post('/auth/login', [AuthController::class, 'login']);
@@ -37,6 +37,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/admin/pages/{page}/sections', [PageController::class, 'storeSection']);
         Route::put('/admin/sections/{section}', [PageController::class, 'updateSection']);
         Route::delete('/admin/sections/{section}', [PageController::class, 'destroySection']);
+        Route::post('/admin/media', [MediaController::class, 'store']);
 
         foreach ([
             'services' => ServiceController::class,
