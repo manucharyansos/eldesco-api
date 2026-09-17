@@ -37,6 +37,11 @@ class PageController extends Controller
         return Page::with('sections')->orderBy('sort_order')->get();
     }
 
+    public function adminShow(Page $page)
+    {
+        return response()->json($page->load('sections'));
+    }
+
     public function store(Request $request)
     {
         $data = $request->validate([
