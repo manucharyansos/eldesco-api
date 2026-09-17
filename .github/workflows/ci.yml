@@ -3,7 +3,7 @@ name: Backend CI
 on:
   push:
     branches:
-      - build/laravel-complete
+      - main
   workflow_dispatch:
 
 jobs:
