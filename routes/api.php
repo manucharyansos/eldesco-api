@@ -12,8 +12,8 @@ Route::get('/pages', [PageController::class, 'index']);
 Route::get('/pages/{slug}', [PageController::class, 'show']);
 Route::get('/services', [ServiceController::class, 'index']);
 Route::get('/services/{id}', [ServiceController::class, 'show']);
-Route::get('/projects/categories', [ProjectController::class, 'categories']);
 Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects/categories', [ProjectController::class, 'categories']);
 Route::get('/projects/{id}', [ProjectController::class, 'show']);
 Route::get('/team', [TeamController::class, 'index']);
 Route::get('/team/{id}', [TeamController::class, 'show']);
@@ -32,6 +32,10 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/admin/pages', [PageController::class, 'store']);
         Route::put('/admin/pages/{page}', [PageController::class, 'update']);
         Route::delete('/admin/pages/{page}', [PageController::class, 'destroy']);
+
+        Route::post('/admin/pages/{page}/sections', [PageController::class, 'storeSection']);
+        Route::put('/admin/sections/{section}', [PageController::class, 'updateSection']);
+        Route::delete('/admin/sections/{section}', [PageController::class, 'destroySection']);
 
         foreach ([
             'services' => ServiceController::class,
