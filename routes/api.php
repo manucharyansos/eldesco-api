@@ -29,6 +29,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::middleware('admin')->group(function () {
         Route::get('/admin/pages', [PageController::class, 'adminIndex']);
+        Route::get('/admin/pages/{page}', [PageController::class, 'adminShow']);
         Route::post('/admin/pages', [PageController::class, 'store']);
         Route::put('/admin/pages/{page}', [PageController::class, 'update']);
         Route::delete('/admin/pages/{page}', [PageController::class, 'destroy']);
