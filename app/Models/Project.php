@@ -24,12 +24,38 @@ class Project extends Model
             'id' => $this->id,
             'title' => $this->{"title_$lang"} ?? $this->title_en,
             'description' => $this->{"description_$lang"} ?? $this->description_en,
-            'image' => $this->image_url ?: $this->demoImage(),
-            'thumbnail' => $this->thumbnail_url,
+            'image' => $this->publicImageUrl(),
+            'thumbnail' => $this->publicAssetUrl($this->thumbnail_url),
             'category' => $this->category,
             'featured' => $this->featured,
             'createdAt' => $this->created_at
         ];
+    }
+
+    private function publicImageUrl(): ?string
+    {
+        if (! $this->image_url) {
+            return $this->demoImage();
+        }
+
+        return $this->publicAssetUrl($this->image_url);
+    }
+
+    private function publicAssetUrl(?string $path): ?string
+    {
+        if (! $path) {
+            return null;
+        }
+
+        if (str_starts_with($path, 'http://') || str_starts_with($path, 'https://')) {
+            return $path;
+        }
+
+        if (str_starts_with($path, '/storage/')) {
+            return url($path);
+        }
+
+        return $path;
     }
 
     private function demoImage(): ?string
