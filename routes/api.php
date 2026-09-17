@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\{
     AuthController, ServiceController, ProjectController, TeamController,
-    NewsController, GalleryController, PageController, MediaController
+    NewsController, GalleryController, PageController, MediaController,
+    AdminContentController
 };
 
 Route::post('/auth/login', [AuthController::class, 'login']);
@@ -33,6 +34,15 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/admin/pages', [PageController::class, 'store']);
         Route::put('/admin/pages/{page}', [PageController::class, 'update']);
         Route::delete('/admin/pages/{page}', [PageController::class, 'destroy']);
+
+        Route::get('/admin/services', [AdminContentController::class, 'services']);
+        Route::get('/admin/services/{id}', [AdminContentController::class, 'service']);
+        Route::get('/admin/projects', [AdminContentController::class, 'projects']);
+        Route::get('/admin/projects/{id}', [AdminContentController::class, 'project']);
+        Route::get('/admin/team', [AdminContentController::class, 'team']);
+        Route::get('/admin/team/{id}', [AdminContentController::class, 'teamMember']);
+        Route::get('/admin/news', [AdminContentController::class, 'news']);
+        Route::get('/admin/news/{id}', [AdminContentController::class, 'newsItem']);
 
         Route::post('/admin/pages/{page}/sections', [PageController::class, 'storeSection']);
         Route::put('/admin/sections/{section}', [PageController::class, 'updateSection']);
