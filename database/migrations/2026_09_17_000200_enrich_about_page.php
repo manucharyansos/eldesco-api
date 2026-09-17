@@ -7,8 +7,27 @@ return new class extends Migration {
     public function up(): void
     {
         $page = DB::table('pages')->where('slug', 'about')->first();
+
         if (! $page) {
-            return;
+            $pageId = DB::table('pages')->insertGetId([
+                'slug' => 'about',
+                'title' => json_encode([
+                    'hy' => 'Մեր մասին',
+                    'en' => 'About us',
+                    'ru' => 'О нас',
+                ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                'seo_title' => json_encode([
+                    'hy' => 'ELDESCO-ի մասին',
+                    'en' => 'About ELDESCO',
+                    'ru' => 'О ELDESCO',
+                ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+                'seo_description' => null,
+                'is_published' => true,
+                'sort_order' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+            $page = DB::table('pages')->where('id', $pageId)->first();
         }
 
         $sections = [
