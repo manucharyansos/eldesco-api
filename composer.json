@@ -1,15 +1,17 @@
 {
+  "$schema": "https://getcomposer.org/schema.json",
   "name": "eldesco/api",
+  "type": "project",
   "description": "ELDESCO LLC - Laravel REST API",
   "require": {
     "php": "^8.2",
-    "laravel/framework": "^11.0",
+    "laravel/framework": "^12.0",
     "laravel/sanctum": "^4.0",
-    "laravel/tinker": "^2.9"
+    "laravel/tinker": "^2.10"
   },
   "require-dev": {
-    "phpunit/phpunit": "^11.0",
-    "laravel/pint": "^1.13"
+    "laravel/pint": "^1.24",
+    "phpunit/phpunit": "^11.5"
   },
   "autoload": {
     "psr-4": {
@@ -29,5 +31,20 @@
     "post-create-project-cmd": [
       "@php artisan key:generate --ansi"
     ]
-  }
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
