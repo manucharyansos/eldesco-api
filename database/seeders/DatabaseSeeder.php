@@ -28,7 +28,19 @@ class DatabaseSeeder extends Seeder
             return;
         }
 
-        User::firstOrCreate(
+        if (app()->environment('production')) {
+            User::firstOrCreate(
+                ['email' => $email],
+                [
+                    'name' => 'ELDESCO Admin',
+                    'password_hash' => Hash::make($password),
+                    'role' => 'admin',
+                ]
+            );
+            return;
+        }
+
+        User::updateOrCreate(
             ['email' => $email],
             [
                 'name' => 'ELDESCO Admin',
