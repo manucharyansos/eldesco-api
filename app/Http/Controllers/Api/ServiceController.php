@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class ServiceController extends Controller
 {
@@ -20,7 +21,9 @@ class ServiceController extends Controller
     public function show($id, Request $request)
     {
         $lang = $request->query('lang', 'en');
-        $service = Service::find($id);
+        $service = ctype_digit((string) $id)
+            ? Service::find($id)
+            : Service::where('slug', $id)->first();
 
         if (!$service) {
             return response()->json(['error' => 'Not found'], 404);
@@ -35,6 +38,7 @@ class ServiceController extends Controller
         $this->authorize('isAdmin');
 
         $validated = $request->validate([
+            'slug' => ['nullable', 'string', 'max:120', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', 'unique:services,slug'],
             'title_hy' => 'required|string',
             'title_en' => 'required|string',
             'title_ru' => 'string|nullable',
@@ -42,6 +46,7 @@ class ServiceController extends Controller
             'description_en' => 'string|nullable',
             'description_ru' => 'string|nullable',
             'icon' => 'string|nullable',
+            'image_url' => 'string|nullable|max:500',
             'order_index' => 'integer|nullable'
         ]);
 
@@ -59,6 +64,7 @@ class ServiceController extends Controller
         }
 
         $validated = $request->validate([
+            'slug' => ['nullable', 'string', 'max:120', 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/', Rule::unique('services', 'slug')->ignore($service->id)],
             'title_hy' => 'string|nullable',
             'title_en' => 'string|nullable',
             'title_ru' => 'string|nullable',
@@ -66,6 +72,7 @@ class ServiceController extends Controller
             'description_en' => 'string|nullable',
             'description_ru' => 'string|nullable',
             'icon' => 'string|nullable',
+            'image_url' => 'string|nullable|max:500',
             'order_index' => 'integer|nullable'
         ]);
 

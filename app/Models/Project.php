@@ -61,9 +61,11 @@ class Project extends Model
     private function demoImage(): ?string
     {
         return match ((int) $this->order_index) {
-            1 => '/images/projects/substation.png',
-            4 => '/images/projects/led.png',
-            5 => '/images/projects/metalworks.png',
+            1 => '/images/deck/power/switchboard-copper-3200kw.webp',
+            2 => '/images/deck/industrial/pumping-station.webp',
+            3 => '/images/deck/refrigeration/compressor-rack.webp',
+            4 => '/images/deck/led/concert-hall-screen.webp',
+            5 => '/images/deck/metalworks/laser-cutting.webp',
             default => null,
         };
     }

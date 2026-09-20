@@ -154,6 +154,58 @@ curl -X POST http://localhost:8000/api/services \
   }'
 ```
 
+### Site content (used by the website)
+
+- `GET /api/site?lang=hy|en|ru` - company settings, interface labels and menus (localized)
+- `GET /api/pages/{slug}?lang=` - CMS page with its sections
+
+### Admin: site settings, menus, media
+
+- `GET /api/admin/site` - all settings + menus (all languages)
+- `PUT /api/admin/site/settings` - `{ "settings": { "contact.phone": "+374..." } }`
+- `PUT /api/admin/site/navigation` - `{ "menus": { "header": [...], "footer": [...] } }`
+- `GET /api/admin/media`, `POST /api/admin/media`, `DELETE /api/admin/media/{id}`
+
+## Production deployment (https://api.eldesco.am)
+
+The website (https://eldesco.am) is a separate Next.js app; this API only serves JSON and uploaded images.
+
+```bash
+composer install --no-dev --optimize-autoloader
+cp .env.example .env            # then edit: APP_ENV=production, APP_DEBUG=false,
+php artisan key:generate        # APP_URL=https://api.eldesco.am, DB_*, ELDESCO_ADMIN_PASSWORD,
+                                # CORS_ALLOWED_ORIGINS=https://eldesco.am,https://www.eldesco.am
+php artisan migrate --force
+php artisan storage:link        # uploaded images are served from https://api.eldesco.am/storage/...
+php artisan db:seed --class=PresentationContentSeeder --force   # first deploy only, see below
+php artisan config:cache && php artisan route:cache
+```
+
+`PresentationContentSeeder` loads the pages, services, menus and photos from the company presentation.
+Site settings are only created when missing, but **pages, services and menus it manages are reset**
+to the presentation defaults - run it once, then edit everything from the admin panel.
+
+Nginx (PHP-FPM) example:
+
+```nginx
+server {
+    server_name api.eldesco.am;
+    root /var/www/eldesco-api/public;
+    index index.php;
+    client_max_body_size 12M;          # image uploads (limit is 10 MB per file)
+
+    location / { try_files $uri $uri/ /index.php?$query_string; }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+    }
+    location ~ /\.(?!well-known) { deny all; }
+}
+```
+
+Make sure `storage/` and `bootstrap/cache/` are writable by the PHP user, and issue the TLS certificate
+(for example `certbot --nginx -d api.eldesco.am`).
+
 ## Structure
 
 - `app/Models/` - Eloquent models

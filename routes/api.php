@@ -4,11 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\{
     AuthController, ServiceController, ProjectController, TeamController,
     NewsController, GalleryController, PageController, MediaController,
-    AdminContentController
+    AdminContentController, SiteController
 };
 
 Route::post('/auth/login', [AuthController::class, 'login']);
 
+Route::get('/site', [SiteController::class, 'show']);
 Route::get('/pages', [PageController::class, 'index']);
 Route::get('/pages/{slug}', [PageController::class, 'show']);
 Route::get('/services', [ServiceController::class, 'index']);
@@ -47,7 +48,13 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/admin/pages/{page}/sections', [PageController::class, 'storeSection']);
         Route::put('/admin/sections/{section}', [PageController::class, 'updateSection']);
         Route::delete('/admin/sections/{section}', [PageController::class, 'destroySection']);
+        Route::get('/admin/media', [MediaController::class, 'index']);
         Route::post('/admin/media', [MediaController::class, 'store']);
+        Route::delete('/admin/media/{id}', [MediaController::class, 'destroy'])->whereNumber('id');
+
+        Route::get('/admin/site', [SiteController::class, 'adminShow']);
+        Route::put('/admin/site/settings', [SiteController::class, 'updateSettings']);
+        Route::put('/admin/site/navigation', [SiteController::class, 'updateNavigation']);
 
         foreach ([
             'services' => ServiceController::class,

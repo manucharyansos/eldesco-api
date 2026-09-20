@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Page;
 use App\Models\PageSection;
+use App\Support\Localizer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -172,21 +173,11 @@ class PageController extends Controller
 
     private function language(Request $request): string
     {
-        $lang = strtolower((string) $request->query('lang', 'hy'));
-        return in_array($lang, ['hy', 'en', 'ru'], true) ? $lang : 'hy';
+        return Localizer::language($request->query('lang'));
     }
 
     private function localize(mixed $value, string $lang): mixed
     {
-        if (!is_array($value)) {
-            return $value;
-        }
-
-        $languageKeys = array_intersect(array_keys($value), ['hy', 'en', 'ru']);
-        if ($languageKeys !== []) {
-            return $value[$lang] ?? $value['hy'] ?? $value['en'] ?? $value['ru'] ?? null;
-        }
-
-        return array_map(fn ($item) => $this->localize($item, $lang), $value);
+        return Localizer::localize($value, $lang);
     }
 }

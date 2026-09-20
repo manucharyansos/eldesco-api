@@ -1,0 +1,2361 @@
+{
+ "settings": [
+  {
+   "group": "company",
+   "key": "company.name",
+   "type": "localized",
+   "value": {
+    "hy": "ԷԼԴԵՍՔՈ ՍՊԸ",
+    "en": "ELDESCO LLC",
+    "ru": "ELDESCO LLC"
+   }
+  },
+  {
+   "group": "company",
+   "key": "company.short_name",
+   "type": "localized",
+   "value": {
+    "hy": "ELDESCO",
+    "en": "ELDESCO",
+    "ru": "ELDESCO"
+   }
+  },
+  {
+   "group": "company",
+   "key": "company.established_year",
+   "type": "number",
+   "value": 2011
+  },
+  {
+   "group": "company",
+   "key": "company.tagline",
+   "type": "localized",
+   "value": {
+    "hy": "Էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծում և պատրաստում։",
+    "en": "Design and production of energy infrastructure and engineering systems.",
+    "ru": "Проектирование и производство энергетической инфраструктуры и инженерных систем."
+   }
+  },
+  {
+   "group": "company",
+   "key": "company.tax_id",
+   "type": "text",
+   "value": "01015118"
+  },
+  {
+   "group": "company",
+   "key": "company.registration",
+   "type": "text",
+   "value": "282.110.47988 04/10/2011"
+  },
+  {
+   "group": "company",
+   "key": "company.director",
+   "type": "localized",
+   "value": {
+    "hy": "Վահե Պարսամյան",
+    "en": "Vahe Parsamyan",
+    "ru": "Ваге Парсамян"
+   }
+  },
+  {
+   "group": "company",
+   "key": "company.director_position",
+   "type": "localized",
+   "value": {
+    "hy": "Տնօրեն",
+    "en": "Director",
+    "ru": "Директор"
+   }
+  },
+  {
+   "group": "company",
+   "key": "company.chief_accountant",
+   "type": "localized",
+   "value": {
+    "hy": "Վահրամ Կիկոյան",
+    "en": "Vahram Kikoyan",
+    "ru": "Ваграм Кикоян"
+   }
+  },
+  {
+   "group": "company",
+   "key": "company.chief_accountant_position",
+   "type": "localized",
+   "value": {
+    "hy": "Գլխավոր հաշվապահ",
+    "en": "Chief Accountant",
+    "ru": "Главный бухгалтер"
+   }
+  },
+  {
+   "group": "contact",
+   "key": "contact.phone",
+   "type": "text",
+   "value": "+37499694569"
+  },
+  {
+   "group": "contact",
+   "key": "contact.email",
+   "type": "text",
+   "value": "eldesco@eldesco.am"
+  },
+  {
+   "group": "contact",
+   "key": "contact.business_address",
+   "type": "localized",
+   "value": {
+    "hy": "ՀՀ, ք․ Երևան, Թբիլիսյան 35/9",
+    "en": "35/9 Tbilisyan Hwy, Yerevan, Armenia",
+    "ru": "Армения, Ереван, Тбилисское шоссе 35/9"
+   }
+  },
+  {
+   "group": "contact",
+   "key": "contact.legal_address",
+   "type": "localized",
+   "value": {
+    "hy": "ՀՀ, ք․ Երևան, Թբիլիսյան 35/9",
+    "en": "35/9 Tbilisyan Hwy, Yerevan, Armenia",
+    "ru": "Армения, Ереван, Тбилисское шоссе 35/9"
+   }
+  },
+  {
+   "group": "bank",
+   "key": "bank.name",
+   "type": "localized",
+   "value": {
+    "hy": "ԱՄԵՐԻԱԲԱՆԿ ՓԲԸ",
+    "en": "AMERIABANK CJSC",
+    "ru": "AMERIABANK CJSC"
+   }
+  },
+  {
+   "group": "bank",
+   "key": "bank.account_amd",
+   "type": "text",
+   "value": "1570012878510100 AMD"
+  },
+  {
+   "group": "bank",
+   "key": "bank.account_usd",
+   "type": "text",
+   "value": "1570012878510201 USD"
+  },
+  {
+   "group": "bank",
+   "key": "bank.account_eur",
+   "type": "text",
+   "value": "1570012878510246 EUR"
+  },
+  {
+   "group": "brand",
+   "key": "brand.logo",
+   "type": "image",
+   "value": "/images/brand/eldesco-logo.png"
+  },
+  {
+   "group": "brand",
+   "key": "brand.logo_light",
+   "type": "image",
+   "value": "/images/brand/eldesco-logo-white.png"
+  },
+  {
+   "group": "footer",
+   "key": "footer.bottom_text",
+   "type": "localized",
+   "value": {
+    "hy": "Ինժեներիա • Էներգետիկա • Արտադրական ենթակառուցվածքներ",
+    "en": "Engineering • Energy • Industrial Infrastructure",
+    "ru": "Инжиниринг • Энергетика • Производственная инфраструктура"
+   }
+  },
+  {
+   "group": "seo",
+   "key": "seo.site_name",
+   "type": "localized",
+   "value": {
+    "hy": "ԷԼԴԵՍՔՈ ՍՊԸ",
+    "en": "ELDESCO LLC",
+    "ru": "ELDESCO LLC"
+   }
+  },
+  {
+   "group": "seo",
+   "key": "seo.default_description",
+   "type": "localized",
+   "value": {
+    "hy": "Էլդեսքո ՍՊԸ՝ էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծում և պատրաստում, թիթեղային մետաղի մշակման ամբողջական ցիկլ։ Երևան, 2011 թվականից։",
+    "en": "ELDESCO LLC designs and produces energy infrastructure and engineering systems, with a full-cycle sheet metal division. Yerevan, since 2011.",
+    "ru": "ELDESCO LLC проектирует и производит энергетическую инфраструктуру и инженерные системы, включая полный цикл обработки листового металла. Ереван, с 2011 года."
+   }
+  },
+  {
+   "group": "seo",
+   "key": "seo.og_image",
+   "type": "image",
+   "value": "/images/deck/power/switchboard-copper-3200kw.webp"
+  }
+ ],
+ "navigation": {
+  "header": [
+   {
+    "label": {
+     "hy": "Մեր մասին",
+     "en": "About",
+     "ru": "О нас"
+    },
+    "page_slug": "about",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Ծառայություններ",
+     "en": "Services",
+     "ru": "Услуги"
+    },
+    "page_slug": "services",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": [
+     {
+      "label": {
+       "hy": "Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ",
+       "en": "Low- and Medium-Voltage Power Infrastructure",
+       "ru": "Энергетическая инфраструктура низкого и среднего напряжения"
+      },
+      "page_slug": "services/power-infrastructure",
+      "url": null,
+      "target": "_self",
+      "is_enabled": true,
+      "children": []
+     },
+     {
+      "label": {
+       "hy": "Արտադրական ենթակառուցվածքներ",
+       "en": "Industrial Production Infrastructure",
+       "ru": "Производственная инфраструктура"
+      },
+      "page_slug": "services/industrial-infrastructure",
+      "url": null,
+      "target": "_self",
+      "is_enabled": true,
+      "children": []
+     },
+     {
+      "label": {
+       "hy": "Լուսադիոդային էկրաններ",
+       "en": "LED Display Systems",
+       "ru": "Светодиодные экраны"
+      },
+      "page_slug": "services/led-displays",
+      "url": null,
+      "target": "_self",
+      "is_enabled": true,
+      "children": []
+     },
+     {
+      "label": {
+       "hy": "Սառնարանային սարքավորումներ",
+       "en": "Refrigeration and Cooling Equipment",
+       "ru": "Холодильное и охлаждающее оборудование"
+      },
+      "page_slug": "services/refrigeration",
+      "url": null,
+      "target": "_self",
+      "is_enabled": true,
+      "children": []
+     },
+     {
+      "label": {
+       "hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
+       "en": "Full-Cycle Sheet Metal Processing",
+       "ru": "Полный цикл обработки листового металла"
+      },
+      "page_slug": "services/sheet-metal-processing",
+      "url": null,
+      "target": "_self",
+      "is_enabled": true,
+      "children": []
+     }
+    ]
+   },
+   {
+    "label": {
+     "hy": "Նախագծեր",
+     "en": "Projects",
+     "ru": "Проекты"
+    },
+    "page_slug": "projects",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Պատվիրատուներ",
+     "en": "Customers",
+     "ru": "Заказчики"
+    },
+    "page_slug": "customers",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Կապ",
+     "en": "Contact",
+     "ru": "Контакты"
+    },
+    "page_slug": "contact",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   }
+  ],
+  "footer": [
+   {
+    "label": {
+     "hy": "Մեր մասին",
+     "en": "About",
+     "ru": "О нас"
+    },
+    "page_slug": "about",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Ծառայություններ",
+     "en": "Services",
+     "ru": "Услуги"
+    },
+    "page_slug": "services",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Նախագծեր",
+     "en": "Projects",
+     "ru": "Проекты"
+    },
+    "page_slug": "projects",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Պատվիրատուներ",
+     "en": "Customers",
+     "ru": "Заказчики"
+    },
+    "page_slug": "customers",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   },
+   {
+    "label": {
+     "hy": "Կապ",
+     "en": "Contact",
+     "ru": "Контакты"
+    },
+    "page_slug": "contact",
+    "url": null,
+    "target": "_self",
+    "is_enabled": true,
+    "children": []
+   }
+  ]
+ },
+ "services": [
+  {
+   "slug": "power-infrastructure",
+   "order_index": 1,
+   "icon": "⚡",
+   "image_url": "/images/deck/power/switchboard-copper-3200kw.webp",
+   "title_hy": "Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ",
+   "title_en": "Low- and Medium-Voltage Power Infrastructure",
+   "title_ru": "Энергетическая инфраструктура низкого и среднего напряжения",
+   "description_hy": "Միջին լարման ենթակայաններ, ցածր և միջին լարման բաշխիչ վահանակներ, հաղորդադողեր ու մալուխներ, հաճախային փոխակերպիչներ և շարժիչի փափուկ գործարկման համակարգեր։",
+   "description_en": "Medium-voltage substations, low- and medium-voltage distribution panels, busbars and cable networks, frequency converters and motor soft starter systems.",
+   "description_ru": "Подстанции среднего напряжения, распределительные щиты, шинопроводы и кабельные сети, частотные преобразователи и системы плавного пуска двигателей."
+  },
+  {
+   "slug": "industrial-infrastructure",
+   "order_index": 2,
+   "icon": "🏭",
+   "image_url": "/images/deck/industrial/compressed-air-station.webp",
+   "title_hy": "Արտադրական ենթակառուցվածքներ",
+   "title_en": "Industrial Production Infrastructure",
+   "title_ru": "Производственная инфраструктура",
+   "description_hy": "Սեղմած օդի մատակարարման կայաններ և խողովակաշարեր, պոմպակայաններ և չժանգոտվող պողպատից խողովակաշարեր, SCADA համակարգեր Siemens STEP 7-ի հիման վրա։",
+   "description_en": "Compressed air supply stations and pipelines, pumping stations and stainless steel pipelines, and SCADA systems based on Siemens STEP 7.",
+   "description_ru": "Станции подачи сжатого воздуха и трубопроводы, насосные станции и трубопроводы из нержавеющей стали, системы SCADA на базе Siemens STEP 7."
+  },
+  {
+   "slug": "led-displays",
+   "order_index": 3,
+   "icon": "▦",
+   "image_url": "/images/deck/led/concert-hall-screen.webp",
+   "title_hy": "Լուսադիոդային էկրաններ",
+   "title_en": "LED Display Systems",
+   "title_ru": "Светодиодные экраны",
+   "description_hy": "Լուսադիոդային էկրաններ շենքերի ճակատների, համերգասրահների և առևտրային տարածքների համար։",
+   "description_en": "LED display systems for building façades, concert halls and commercial spaces.",
+   "description_ru": "Светодиодные экраны для фасадов зданий, концертных залов и коммерческих пространств."
+  },
+  {
+   "slug": "refrigeration",
+   "order_index": 4,
+   "icon": "❄",
+   "image_url": "/images/deck/refrigeration/air-cooler.webp",
+   "title_hy": "Սառնարանային սարքավորումներ",
+   "title_en": "Refrigeration and Cooling Equipment",
+   "title_ru": "Холодильное и охлаждающее оборудование",
+   "description_hy": "Սառնարանային սարքավորումներ՝ կոմպրեսորային ագրեգատներ, օդային հովացուցիչներ և կառավարման վահանակներ։",
+   "description_en": "Refrigeration and cooling equipment: compressor racks, air coolers and control panels.",
+   "description_ru": "Холодильное и охлаждающее оборудование: компрессорные агрегаты, воздухоохладители и панели управления."
+  },
+  {
+   "slug": "sheet-metal-processing",
+   "order_index": 5,
+   "icon": "◇",
+   "image_url": "/images/deck/metalworks/laser-cutting.webp",
+   "title_hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
+   "title_en": "Full-Cycle Sheet Metal Processing",
+   "title_ru": "Полный цикл обработки листового металла",
+   "description_hy": "Լազերային կտրում և եռակցում, ծալում և գլորում՝ բարձր ճշգրտության սարքավորումներով։",
+   "description_en": "Laser cutting and welding, bending and rolling on high-precision equipment.",
+   "description_ru": "Лазерная резка и сварка, гибка и вальцовка на высокоточном оборудовании."
+  }
+ ],
+ "projects": [
+  {
+   "order_index": 1,
+   "featured": true,
+   "category": "Power Infrastructure",
+   "image_url": "/images/deck/power/switchboard-copper-3200kw.webp",
+   "title_hy": "Միջին լարման ենթակայաններ՝ 3200 կՎտ հզորությամբ",
+   "title_en": "Medium-Voltage Substations - 3200 kW",
+   "title_ru": "Подстанции среднего напряжения - 3200 кВт",
+   "description_hy": "Ցածր և միջին լարման էներգետիկ ենթակառուցվածքների ուղղություն։",
+   "description_en": "Low- and medium-voltage power infrastructure.",
+   "description_ru": "Энергетическая инфраструктура низкого и среднего напряжения."
+  },
+  {
+   "order_index": 2,
+   "featured": true,
+   "category": "Industrial Infrastructure",
+   "image_url": "/images/deck/industrial/pumping-station.webp",
+   "title_hy": "Սեղմած օդի կայաններ և պոմպակայաններ",
+   "title_en": "Compressed Air and Pumping Stations",
+   "title_ru": "Станции сжатого воздуха и насосные станции",
+   "description_hy": "Սեղմած օդի մատակարարման կայաններ, պոմպակայաններ և չժանգոտվող պողպատից խողովակաշարեր։",
+   "description_en": "Compressed air supply stations, pumping stations and stainless steel pipeline systems.",
+   "description_ru": "Станции подачи сжатого воздуха, насосные станции и трубопроводы из нержавеющей стали."
+  },
+  {
+   "order_index": 3,
+   "featured": false,
+   "category": "Refrigeration",
+   "image_url": "/images/deck/refrigeration/compressor-rack.webp",
+   "title_hy": "Սառնարանային սարքավորումներ",
+   "title_en": "Refrigeration and Cooling Equipment",
+   "title_ru": "Холодильное и охлаждающее оборудование",
+   "description_hy": "Կոմպրեսորային ագրեգատներ, օդային հովացուցիչներ և կառավարման վահանակներ։",
+   "description_en": "Compressor racks, air coolers and control panels.",
+   "description_ru": "Компрессорные агрегаты, воздухоохладители и панели управления."
+  },
+  {
+   "order_index": 4,
+   "featured": true,
+   "category": "LED",
+   "image_url": "/images/deck/led/concert-hall-screen.webp",
+   "title_hy": "Լուսադիոդային էկրաններ",
+   "title_en": "LED Display Systems",
+   "title_ru": "Светодиодные экраны",
+   "description_hy": null,
+   "description_en": null,
+   "description_ru": null
+  },
+  {
+   "order_index": 5,
+   "featured": true,
+   "category": "Metalworks",
+   "image_url": "/images/deck/metalworks/laser-cutting.webp",
+   "title_hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
+   "title_en": "Full-Cycle Sheet Metal Manufacturing",
+   "title_ru": "Полный цикл обработки листового металла",
+   "description_hy": null,
+   "description_en": null,
+   "description_ru": null
+  }
+ ],
+ "pages": [
+  {
+   "slug": "home",
+   "sort_order": 0,
+   "title": {
+    "hy": "Գլխավոր",
+    "en": "Home",
+    "ru": "Главная"
+   },
+   "seo_title": {
+    "hy": "ELDESCO - Էներգետիկ և ինժեներական համակարգեր",
+    "en": "ELDESCO - Energy & Engineering Systems",
+    "ru": "ELDESCO - Энергетические и инженерные системы"
+   },
+   "seo_description": {
+    "hy": "Էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծում և պատրաստում։ Միջին լարման ենթակայաններ, սառնարանային սարքավորումներ, LED էկրաններ, թիթեղային մետաղի մշակում։",
+    "en": "Design and production of energy infrastructure and engineering systems: medium-voltage substations, refrigeration equipment, LED displays and sheet metal processing.",
+    "ru": "Проектирование и производство энергетической инфраструктуры и инженерных систем: подстанции, холодильное оборудование, светодиодные экраны и обработка листового металла."
+   },
+   "sections": [
+    {
+     "key": "hero",
+     "type": "hero",
+     "content": {
+      "eyebrow": {
+       "hy": "ԷԼԴԵՍՔՈ ՍՊԸ · 2011",
+       "en": "ELDESCO LLC · 2011",
+       "ru": "ELDESCO LLC · 2011"
+      },
+      "title": {
+       "hy": "Էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծում և պատրաստում",
+       "en": "Design and production of energy infrastructure and engineering systems",
+       "ru": "Проектирование и производство энергетической инфраструктуры и инженерных систем"
+      },
+      "subtitle": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      },
+      "cta_label": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "cta_url": "/services",
+      "cta2_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta2_url": "/contact",
+      "image": "/images/deck/power/switchboard-copper-3200kw.webp",
+      "slides": [
+       {
+        "label": {
+         "hy": "Էներգետիկ ենթակառուցվածքներ",
+         "en": "Power infrastructure",
+         "ru": "Энергетическая инфраструктура"
+        },
+        "image": "/images/deck/power/switchboard-copper-3200kw.webp",
+        "url": "/services/power-infrastructure"
+       },
+       {
+        "label": {
+         "hy": "Արտադրական ենթակառուցվածքներ",
+         "en": "Industrial infrastructure",
+         "ru": "Производственная инфраструктура"
+        },
+        "image": "/images/deck/industrial/compressed-air-station.webp",
+        "url": "/services/industrial-infrastructure"
+       },
+       {
+        "label": {
+         "hy": "Լուսադիոդային էկրաններ",
+         "en": "LED displays",
+         "ru": "Светодиодные экраны"
+        },
+        "image": "/images/deck/led/concert-hall-screen.webp",
+        "url": "/services/led-displays"
+       },
+       {
+        "label": {
+         "hy": "Սառնարանային սարքավորումներ",
+         "en": "Refrigeration",
+         "ru": "Холодильное оборудование"
+        },
+        "image": "/images/deck/refrigeration/air-cooler.webp",
+        "url": "/services/refrigeration"
+       },
+       {
+        "label": {
+         "hy": "Թիթեղային մետաղի մշակում",
+         "en": "Sheet metal",
+         "ru": "Обработка металла"
+        },
+        "image": "/images/deck/metalworks/laser-cutting.webp",
+        "url": "/services/sheet-metal-processing"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "intro",
+     "type": "text",
+     "content": {
+      "title": {
+       "hy": "ԷլԴեսՔո-ի մասին",
+       "en": "About ELDESCO",
+       "ru": "О ELDESCO"
+      },
+      "paragraphs": [
+       {
+        "hy": "Էլդեսքո ՍՊԸ-ն հիմնադրվել է 2011 թվականին։ Գործունեության ծավալման ընթացքում ընկերությունը համագործակցել է հարյուրավոր փոքր, միջին, ինչպես նաև խոշոր տնտեսավարողների հետ, ինչը դարձել է շարունակական՝ մատուցված ծառայության բարձր որակի շնորհիվ։",
+        "en": "ELDESCO LLC was established in 2011. Throughout its operational growth, the company has partnered with hundreds of small, medium, and large enterprises, building long-term collaborations driven by the consistently high quality of its services.",
+        "ru": "ELDESCO LLC основана в 2011 году. За время развития компания сотрудничала с сотнями малых, средних и крупных предприятий, выстраивая долгосрочные отношения благодаря стабильно высокому качеству услуг."
+       }
+      ],
+      "image": "/images/deck/power/panels-workshop.webp",
+      "image_position": "right",
+      "cta_label": {
+       "hy": "Ավելին ընկերության մասին",
+       "en": "More about the company",
+       "ru": "Подробнее о компании"
+      },
+      "cta_url": "/about"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "services",
+     "type": "services",
+     "content": {
+      "title": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "subtitle": {
+       "hy": "Նախագծումից և արտադրությունից մինչև մոնտաժ ու ավտոմատացում՝ մեկ ինժեներական գործընկերոջ հետ։",
+       "en": "From design and production to installation and automation, with a single engineering partner.",
+       "ru": "От проектирования и производства до монтажа и автоматизации - с одним инженерным партнером."
+      }
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "metalworks",
+     "type": "feature_split",
+     "content": {
+      "theme": "dark",
+      "title": {
+       "hy": "Մեթալորքս՝ մետաղամշակման առանձին ուղղություն",
+       "en": "Metalworks: a dedicated metal processing division",
+       "ru": "Metalworks: отдельное направление металлообработки"
+      },
+      "paragraphs": [
+       {
+        "hy": "Արտադրական հնարավորությունների ընդլայնման նպատակով 2023 թվականին ընկերությունը հիմնեց մետաղամշակման առանձին ուղղություն («Մեթալորքս» ՍՊԸ)։ Կարճ ժամանակահատվածում այն դիրքավորվեց որպես ոլորտի առաջատարներից մեկը Հայաստանի Հանրապետությունում։",
+        "en": "In 2023, with the aim of expanding its production capabilities, the company established a dedicated metal processing division (Metalworks LLC). Within a short period, it positioned itself among the industry leaders in the Republic of Armenia.",
+        "ru": "В 2023 году для расширения производственных возможностей компания создала отдельное направление металлообработки (Metalworks LLC). За короткое время оно вошло в число лидеров отрасли в Республике Армения."
+       },
+       {
+        "hy": "Արտասահմանյան գործընկերների հետ համագործակցության արդյունքում ընկերությունը համալրվել է մետաղի մշակման ժամանակակից, բարձր ճշգրտության սարքավորումներով, որոնց մի մասը եզակի է ՀՀ-ում։",
+        "en": "Through cooperation with international partners, the company has been equipped with advanced, high-precision metal processing machinery, some of which is unique within Armenia.",
+        "ru": "Благодаря сотрудничеству с зарубежными партнерами производство оснащено современным высокоточным оборудованием, часть которого уникальна для Армении."
+       }
+      ],
+      "image": "/images/deck/metalworks/laser-welding-station.webp",
+      "image_position": "left",
+      "cta_label": {
+       "hy": "Թիթեղային մետաղի մշակում",
+       "en": "Sheet metal processing",
+       "ru": "Обработка листового металла"
+      },
+      "cta_url": "/services/sheet-metal-processing"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "stats",
+     "type": "stats",
+     "content": {
+      "items": [
+       {
+        "value": "2011",
+        "label": {
+         "hy": "Հիմնադրման տարի",
+         "en": "Established",
+         "ru": "Год основания"
+        }
+       },
+       {
+        "value": "5",
+        "label": {
+         "hy": "Գործունեության հիմնական ոլորտ",
+         "en": "Core activity areas",
+         "ru": "Основных направлений"
+        }
+       },
+       {
+        "value": "2023",
+        "label": {
+         "hy": "Մեթալորքսի հիմնադրում",
+         "en": "Metalworks established",
+         "ru": "Создание Metalworks"
+        }
+       },
+       {
+        "value": {
+         "hy": "Հարյուրավոր",
+         "en": "Hundreds",
+         "ru": "Сотни"
+        },
+        "label": {
+         "hy": "Համագործակցած տնտեսավարողներ",
+         "en": "Partner enterprises",
+         "ru": "Компаний-партнеров"
+        }
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "research",
+     "type": "text",
+     "content": {
+      "title": {
+       "hy": "Գիտահետազոտական ուղղություն",
+       "en": "Research and development",
+       "ru": "Научно-исследовательское направление"
+      },
+      "paragraphs": [
+       {
+        "hy": "Էլդեսքո ՍՊԸ-ի առանձնակի ուղղություններից մեկը գիտահետազոտական ուղղությունն է, որն առաջարկում է մեծ չափերի լազերային բյուրեղների և արհեստական թանկարժեք քարերի արտադրություն։",
+        "en": "One of ELDESCO LLC’s distinctive directions is its research and development division, specializing in the production of large-size laser crystals and synthetic precious stones.",
+        "ru": "Одно из особых направлений ELDESCO LLC - научно-исследовательское, специализирующееся на производстве крупногабаритных лазерных кристаллов и синтетических драгоценных камней."
+       }
+      ],
+      "image": "",
+      "image_position": "right"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "customers",
+     "type": "customers",
+     "content": {
+      "title": {
+       "hy": "Մեր պատվիրատուները",
+       "en": "Our customers",
+       "ru": "Наши заказчики"
+      },
+      "subtitle": {
+       "hy": "Տարիների ընթացքում համագործակցել ենք հարյուրավոր փոքր, միջին և խոշոր կազմակերպությունների հետ։",
+       "en": "Over the years we have worked with hundreds of small, medium and large organizations.",
+       "ru": "За эти годы мы сотрудничали с сотнями малых, средних и крупных организаций."
+      },
+      "items": [
+       {
+        "name": "VivaCell-MTS",
+        "logo": "/images/customers/vivacell-mts.webp"
+       },
+       {
+        "name": "Teghout Mining",
+        "logo": "/images/customers/teghout-mining.webp"
+       },
+       {
+        "name": "Apache",
+        "logo": "/images/customers/apache.webp"
+       },
+       {
+        "name": "Solar City",
+        "logo": "/images/customers/solar-city.webp"
+       },
+       {
+        "name": "Dalma Garden Mall",
+        "logo": "/images/customers/dalma-garden-mall.webp"
+       },
+       {
+        "name": "VEON",
+        "logo": "/images/customers/veon.webp"
+       },
+       {
+        "name": "Aqua Systems",
+        "logo": "/images/customers/aqua-systems.webp"
+       },
+       {
+        "name": "Aquatus",
+        "logo": "/images/customers/aquatus.webp"
+       },
+       {
+        "name": "Bekon Produkt",
+        "logo": "/images/customers/bekon-produkt.webp"
+       },
+       {
+        "name": "Dilijan Beer",
+        "logo": "/images/customers/dilijan-beer.webp"
+       },
+       {
+        "name": "EcoVille",
+        "logo": "/images/customers/ecoville.webp"
+       },
+       {
+        "name": "Gold's Gym",
+        "logo": "/images/customers/golds-gym.webp"
+       },
+       {
+        "name": "Teryan Residential Building",
+        "logo": "/images/customers/teryan.webp"
+       },
+       {
+        "name": "Yerevan Municipality",
+        "logo": "/images/customers/yerevan-municipality.webp"
+       },
+       {
+        "name": "Armada",
+        "logo": "/images/customers/armada.webp"
+       },
+       {
+        "name": "ArmLed",
+        "logo": "/images/customers/armled.webp"
+       },
+       {
+        "name": "Team Telecom Armenia",
+        "logo": "/images/customers/team-telecom-armenia.webp"
+       },
+       {
+        "name": "Customer logo",
+        "logo": "/images/customers/client-d.webp"
+       },
+       {
+        "name": "Armenia Wine",
+        "logo": "/images/customers/armenia-wine.webp"
+       },
+       {
+        "name": "ART Group",
+        "logo": "/images/customers/art-group.webp"
+       },
+       {
+        "name": "Karabakh Telecom",
+        "logo": "/images/customers/karabakh-telecom.webp"
+       },
+       {
+        "name": "IU Networks",
+        "logo": "/images/customers/iu-networks.webp"
+       },
+       {
+        "name": "Vallex Group",
+        "logo": "/images/customers/vallex-group.webp"
+       },
+       {
+        "name": "Pure Iron Plant CJSC",
+        "logo": "/images/customers/pure-iron-plant.webp"
+       },
+       {
+        "name": "Ashtarak",
+        "logo": "/images/customers/ashtarak.webp"
+       },
+       {
+        "name": "Mer Yerkri Kat",
+        "logo": "/images/customers/mer-yerkri-kat.webp"
+       },
+       {
+        "name": "SAGAMAR CJSC",
+        "logo": "/images/customers/sagamar.webp"
+       },
+       {
+        "name": "Synergy International Systems",
+        "logo": "/images/customers/synergy-international-systems.webp"
+       },
+       {
+        "name": "Synopsys",
+        "logo": "/images/customers/synopsys.webp"
+       },
+       {
+        "name": "Customer logo",
+        "logo": "/images/customers/client-medical.webp"
+       },
+       {
+        "name": "Akhtala Ore Processing Combine",
+        "logo": "/images/customers/akhtala-ore-processing.webp"
+       },
+       {
+        "name": "Prof AL",
+        "logo": "/images/customers/prof-al.webp"
+       },
+       {
+        "name": "Chanaparh",
+        "logo": "/images/customers/chanaparh.webp"
+       },
+       {
+        "name": "Cigaronne",
+        "logo": "/images/customers/cigaronne.webp"
+       },
+       {
+        "name": "Ohanyan Brandy Company",
+        "logo": "/images/customers/ohanyan-brandy.webp"
+       },
+       {
+        "name": "Astra Crystals",
+        "logo": "/images/customers/astra-crystals.webp"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "contact",
+     "type": "contact",
+     "content": {
+      "title": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ նախագիծը քննարկելու համար։",
+       "en": "Call or write to us to discuss your project.",
+       "ru": "Позвоните или напишите нам, чтобы обсудить проект."
+      }
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "about",
+   "sort_order": 1,
+   "title": {
+    "hy": "Մեր մասին",
+    "en": "About us",
+    "ru": "О нас"
+   },
+   "seo_title": {
+    "hy": "ELDESCO-ի մասին",
+    "en": "About ELDESCO",
+    "ru": "О ELDESCO"
+   },
+   "seo_description": {
+    "hy": "Էլդեսքո ՍՊԸ՝ հիմնադրվել է 2011 թվականին։ Էներգետիկա, արտադրական ենթակառուցվածքներ, մետաղամշակում, գիտահետազոտական ուղղություն։",
+    "en": "ELDESCO LLC was founded in 2011. Power infrastructure, industrial systems, metalworking and R&D.",
+    "ru": "ELDESCO LLC основана в 2011 году. Энергетика, производственная инфраструктура, металлообработка и научные исследования."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "ԷԼԴԵՍՔՈ ՍՊԸ",
+       "en": "ELDESCO LLC",
+       "ru": "ELDESCO LLC"
+      },
+      "title": {
+       "hy": "Մեր մասին",
+       "en": "About us",
+       "ru": "О нас"
+      },
+      "subtitle": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      },
+      "image": "/images/deck/power/panels-workshop.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "company-story",
+     "type": "text",
+     "content": {
+      "title": {
+       "hy": "ԷլԴեսՔո-ի մասին",
+       "en": "About ELDESCO",
+       "ru": "О ELDESCO"
+      },
+      "paragraphs": [
+       {
+        "hy": "Էլդեսքո ՍՊԸ-ն հիմնադրվել է 2011 թվականին։ Գործունեության ծավալման ընթացքում ընկերությունը համագործակցել է հարյուրավոր փոքր, միջին, ինչպես նաև խոշոր տնտեսավարողների հետ, ինչը դարձել է շարունակական՝ մատուցված ծառայության բարձր որակի շնորհիվ։",
+        "en": "ELDESCO LLC was established in 2011. Throughout its operational growth, the company has partnered with hundreds of small, medium, and large enterprises, building long-term collaborations driven by the consistently high quality of its services.",
+        "ru": "ELDESCO LLC основана в 2011 году. За время развития компания сотрудничала с сотнями малых, средних и крупных предприятий, выстраивая долгосрочные отношения благодаря стабильно высокому качеству услуг."
+       },
+       {
+        "hy": "Արտադրական հնարավորությունների ընդլայնման նպատակով 2023 թվականին ընկերությունը հիմնեց մետաղամշակման առանձին ուղղություն («Մեթալորքս» ՍՊԸ)։ Կարճ ժամանակահատվածում այն դիրքավորվեց որպես ոլորտի առաջատարներից մեկը Հայաստանի Հանրապետությունում։",
+        "en": "In 2023, with the aim of expanding its production capabilities, the company established a dedicated metal processing division (Metalworks LLC). Within a short period, it positioned itself among the industry leaders in the Republic of Armenia.",
+        "ru": "В 2023 году для расширения производственных возможностей компания создала отдельное направление металлообработки (Metalworks LLC). За короткое время оно вошло в число лидеров отрасли в Республике Армения."
+       },
+       {
+        "hy": "Արտասահմանյան գործընկերների հետ համագործակցության արդյունքում ընկերությունը համալրվել է մետաղի մշակման ժամանակակից, բարձր ճշգրտության սարքավորումներով, որոնց մի մասը եզակի է ՀՀ-ում։",
+        "en": "Through cooperation with international partners, the company has been equipped with advanced, high-precision metal processing machinery, some of which is unique within Armenia.",
+        "ru": "Благодаря сотрудничеству с зарубежными партнерами производство оснащено современным высокоточным оборудованием, часть которого уникальна для Армении."
+       },
+       {
+        "hy": "Էլդեսքո ՍՊԸ-ի առանձնակի ուղղություններից մեկը գիտահետազոտական ուղղությունն է, որն առաջարկում է մեծ չափերի լազերային բյուրեղների և արհեստական թանկարժեք քարերի արտադրություն։",
+        "en": "One of ELDESCO LLC’s distinctive directions is its research and development division, specializing in the production of large-size laser crystals and synthetic precious stones.",
+        "ru": "Одно из особых направлений ELDESCO LLC - научно-исследовательское, специализирующееся на производстве крупногабаритных лазерных кристаллов и синтетических драгоценных камней."
+       }
+      ],
+      "image": "",
+      "image_position": "right"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "timeline",
+     "type": "timeline",
+     "content": {
+      "title": {
+       "hy": "Փորձ, արտադրություն և շարունակական զարգացում",
+       "en": "Experience, production and continuous development",
+       "ru": "Опыт, производство и постоянное развитие"
+      },
+      "items": [
+       {
+        "year": "2011",
+        "title": {
+         "hy": "ELDESCO-ի հիմնադրում",
+         "en": "ELDESCO established",
+         "ru": "Основание ELDESCO"
+        },
+        "description": {
+         "hy": "Էներգետիկ ենթակառուցվածքների և ինժեներական համակարգերի նախագծման ու պատրաստման ուղղությամբ։",
+         "en": "Focused on the design and production of energy infrastructure and engineering systems.",
+         "ru": "Проектирование и производство энергетической инфраструктуры и инженерных систем."
+        }
+       },
+       {
+        "year": "2023",
+        "title": {
+         "hy": "Մեթալորքս՝ մետաղամշակման ուղղություն",
+         "en": "Metalworks: metal processing division",
+         "ru": "Metalworks: направление металлообработки"
+        },
+        "description": {
+         "hy": "Արտադրական հնարավորությունների ընդլայնում՝ ժամանակակից, բարձր ճշգրտության սարքավորումներով։",
+         "en": "Production capabilities expanded with modern, high-precision machinery.",
+         "ru": "Расширение производственных возможностей за счет современного высокоточного оборудования."
+        }
+       },
+       {
+        "year": "R&D",
+        "title": {
+         "hy": "Գիտահետազոտական ուղղություն",
+         "en": "Research and development",
+         "ru": "Научно-исследовательское направление"
+        },
+        "description": {
+         "hy": "Մեծ չափերի լազերային բյուրեղների և արհեստական թանկարժեք քարերի արտադրություն։",
+         "en": "Production of large-size laser crystals and synthetic precious stones.",
+         "ru": "Производство крупногабаритных лазерных кристаллов и синтетических драгоценных камней."
+        }
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "gallery",
+     "type": "gallery",
+     "content": {
+      "title": {
+       "hy": "Արտադրություն",
+       "en": "Production",
+       "ru": "Производство"
+      },
+      "images": [
+       {
+        "image": "/images/deck/metalworks/laser-cutting.webp",
+        "w": 2000,
+        "h": 1335
+       },
+       {
+        "image": "/images/deck/metalworks/plate-rolling-cnc.webp",
+        "w": 1800,
+        "h": 1350
+       },
+       {
+        "image": "/images/deck/power/panels-workshop.webp",
+        "w": 1280,
+        "h": 720
+       },
+       {
+        "image": "/images/deck/power/busbar-trunking-pallet.webp",
+        "w": 1503,
+        "h": 544
+       },
+       {
+        "image": "/images/deck/refrigeration/compressor-rack.webp",
+        "w": 1006,
+        "h": 709
+       },
+       {
+        "image": "/images/deck/industrial/stainless-pump-skid.webp",
+        "w": 1261,
+        "h": 1600
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "services",
+   "sort_order": 2,
+   "title": {
+    "hy": "Գործունեության ոլորտները",
+    "en": "Areas of activity",
+    "ru": "Направления деятельности"
+   },
+   "seo_title": {
+    "hy": "Գործունեության ոլորտները",
+    "en": "Areas of activity",
+    "ru": "Направления деятельности"
+   },
+   "seo_description": {
+    "hy": "Հինգ հիմնական ուղղություն՝ էներգետիկա, արտադրական ենթակառուցվածքներ, LED էկրաններ, սառնարանային սարքավորումներ, թիթեղային մետաղի մշակում։",
+    "en": "Five core directions: power infrastructure, industrial infrastructure, LED displays, refrigeration and sheet metal processing.",
+    "ru": "Пять основных направлений: энергетика, производственная инфраструктура, светодиодные экраны, холодильное оборудование и обработка металла."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "ԷԼԴԵՍՔՈ ՍՊԸ",
+       "en": "ELDESCO LLC",
+       "ru": "ELDESCO LLC"
+      },
+      "title": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "subtitle": {
+       "hy": "Նախագծումից և արտադրությունից մինչև մոնտաժ ու ավտոմատացում՝ մեկ ինժեներական գործընկերոջ հետ։",
+       "en": "From design and production to installation and automation, with a single engineering partner.",
+       "ru": "От проектирования и производства до монтажа и автоматизации - с одним инженерным партнером."
+      },
+      "image": "/images/deck/power/substation-cabinets.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "services",
+     "type": "services",
+     "content": {
+      "title": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      },
+      "subtitle": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      }
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "power-infrastructure",
+   "sort_order": 3,
+   "title": {
+    "hy": "Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ",
+    "en": "Low- and Medium-Voltage Power Infrastructure",
+    "ru": "Энергетическая инфраструктура низкого и среднего напряжения"
+   },
+   "seo_title": {
+    "hy": "Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ",
+    "en": "Low- and Medium-Voltage Power Infrastructure",
+    "ru": "Энергетическая инфраструктура низкого и среднего напряжения"
+   },
+   "seo_description": {
+    "hy": "Միջին լարման ենթակայաններ, ցածր և միջին լարման բաշխիչ վահանակներ, հաղորդադողեր ու մալուխներ, հաճախային փոխակերպիչներ և շարժիչի փափուկ գործարկման համակարգեր։",
+    "en": "Medium-voltage substations, low- and medium-voltage distribution panels, busbars and cable networks, frequency converters and motor soft starter systems.",
+    "ru": "Подстанции среднего напряжения, распределительные щиты, шинопроводы и кабельные сети, частотные преобразователи и системы плавного пуска двигателей."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "title": {
+       "hy": "Ցածր և միջին լարման էներգետիկ ենթակառուցվածքներ",
+       "en": "Low- and Medium-Voltage Power Infrastructure",
+       "ru": "Энергетическая инфраструктура низкого и среднего напряжения"
+      },
+      "subtitle": {
+       "hy": "Միջին լարման ենթակայաններ, ցածր և միջին լարման բաշխիչ վահանակներ, հաղորդադողեր ու մալուխներ, հաճախային փոխակերպիչներ և շարժիչի փափուկ գործարկման համակարգեր։",
+       "en": "Medium-voltage substations, low- and medium-voltage distribution panels, busbars and cable networks, frequency converters and motor soft starter systems.",
+       "ru": "Подстанции среднего напряжения, распределительные щиты, шинопроводы и кабельные сети, частотные преобразователи и системы плавного пуска двигателей."
+      },
+      "image": "/images/deck/power/switchboard-copper-3200kw.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "details",
+     "type": "bullets",
+     "content": {
+      "title": {
+       "hy": "Աշխատանքների շրջանակ",
+       "en": "Scope of work",
+       "ru": "Состав работ"
+      },
+      "items": [
+       {
+        "hy": "Միջին լարման ենթակայաններ",
+        "en": "Medium-voltage substations",
+        "ru": "Подстанции среднего напряжения"
+       },
+       {
+        "hy": "Ցածր և միջին լարման բաշխիչ վահանակներ",
+        "en": "Low- and medium-voltage distribution panels",
+        "ru": "Распределительные щиты низкого и среднего напряжения"
+       },
+       {
+        "hy": "Ցածր լարման էներգիայի տեղափոխում՝ հաղորդադողեր, մալուխներ",
+        "en": "Low-voltage power transmission systems: busbars and cable networks",
+        "ru": "Передача электроэнергии низкого напряжения: шинопроводы и кабельные сети"
+       },
+       {
+        "hy": "Ցածր և միջին լարման հաճախային փոխակերպիչներ, շարժիչի փափուկ գործարկման համակարգեր (մոնտաժ)",
+        "en": "Installation of low- and medium-voltage frequency converters and motor soft starter systems",
+        "ru": "Монтаж частотных преобразователей низкого и среднего напряжения и систем плавного пуска двигателей"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "gallery",
+     "type": "gallery",
+     "content": {
+      "title": {
+       "hy": "Լուսանկարներ մեր աշխատանքներից",
+       "en": "From our work",
+       "ru": "Фотографии наших работ"
+      },
+      "images": [
+       {
+        "image": "/images/deck/power/substation-cabinets.webp",
+        "w": 1384,
+        "h": 1138,
+        "caption": {
+         "hy": "Միջին լարման ենթակայաններ",
+         "en": "Medium-voltage substations",
+         "ru": "Подстанции среднего напряжения"
+        }
+       },
+       {
+        "image": "/images/deck/power/switchboard-copper-3200kw.webp",
+        "w": 1600,
+        "h": 1200,
+        "caption": {
+         "hy": "3200 կՎտ հզորությամբ",
+         "en": "Capacity of 3200 kW",
+         "ru": "Мощность 3200 кВт"
+        }
+       },
+       {
+        "image": "/images/deck/power/mv-transformer-busbar.webp",
+        "w": 1200,
+        "h": 1369
+       },
+       {
+        "image": "/images/deck/power/distribution-panel.webp",
+        "w": 729,
+        "h": 918,
+        "caption": {
+         "hy": "Ցածր և միջին լարման բաշխիչ վահանակներ",
+         "en": "Low- and medium-voltage distribution panels",
+         "ru": "Распределительные щиты низкого и среднего напряжения"
+        }
+       },
+       {
+        "image": "/images/deck/power/panels-workshop.webp",
+        "w": 1280,
+        "h": 720
+       },
+       {
+        "image": "/images/deck/power/busbar-trunking-pallet.webp",
+        "w": 1503,
+        "h": 544,
+        "caption": {
+         "hy": "Ցածր լարման էներգիայի տեղափոխում՝ հաղորդադողեր",
+         "en": "Low-voltage power transmission: busbars",
+         "ru": "Передача электроэнергии низкого напряжения: шинопроводы"
+        }
+       },
+       {
+        "image": "/images/deck/power/busbar-riser-cabinet.webp",
+        "w": 789,
+        "h": 1400
+       },
+       {
+        "image": "/images/deck/power/frequency-converter-cabinet.webp",
+        "w": 1031,
+        "h": 1600,
+        "caption": {
+         "hy": "Հաճախային փոխակերպիչներ",
+         "en": "Frequency converters",
+         "ru": "Частотные преобразователи"
+        }
+       },
+       {
+        "image": "/images/deck/power/soft-starter-cabinet.webp",
+        "w": 823,
+        "h": 1600,
+        "caption": {
+         "hy": "Շարժիչի փափուկ գործարկման համակարգեր",
+         "en": "Motor soft starter systems",
+         "ru": "Системы плавного пуска двигателей"
+        }
+       },
+       {
+        "image": "/images/deck/power/mv-insulators.webp",
+        "w": 879,
+        "h": 686
+       },
+       {
+        "image": "/images/deck/power/copper-busbar-frame.webp",
+        "w": 1200,
+        "h": 1600
+       },
+       {
+        "image": "/images/deck/power/converter-rack.webp",
+        "w": 551,
+        "h": 925
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "industrial-infrastructure",
+   "sort_order": 4,
+   "title": {
+    "hy": "Արտադրական ենթակառուցվածքներ",
+    "en": "Industrial Production Infrastructure",
+    "ru": "Производственная инфраструктура"
+   },
+   "seo_title": {
+    "hy": "Արտադրական ենթակառուցվածքներ",
+    "en": "Industrial Production Infrastructure",
+    "ru": "Производственная инфраструктура"
+   },
+   "seo_description": {
+    "hy": "Սեղմած օդի մատակարարման կայաններ և խողովակաշարեր, պոմպակայաններ և չժանգոտվող պողպատից խողովակաշարեր, SCADA համակարգեր Siemens STEP 7-ի հիման վրա։",
+    "en": "Compressed air supply stations and pipelines, pumping stations and stainless steel pipelines, and SCADA systems based on Siemens STEP 7.",
+    "ru": "Станции подачи сжатого воздуха и трубопроводы, насосные станции и трубопроводы из нержавеющей стали, системы SCADA на базе Siemens STEP 7."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "title": {
+       "hy": "Արտադրական ենթակառուցվածքներ",
+       "en": "Industrial Production Infrastructure",
+       "ru": "Производственная инфраструктура"
+      },
+      "subtitle": {
+       "hy": "Սեղմած օդի մատակարարման կայաններ և խողովակաշարեր, պոմպակայաններ և չժանգոտվող պողպատից խողովակաշարեր, SCADA համակարգեր Siemens STEP 7-ի հիման վրա։",
+       "en": "Compressed air supply stations and pipelines, pumping stations and stainless steel pipelines, and SCADA systems based on Siemens STEP 7.",
+       "ru": "Станции подачи сжатого воздуха и трубопроводы, насосные станции и трубопроводы из нержавеющей стали, системы SCADA на базе Siemens STEP 7."
+      },
+      "image": "/images/deck/industrial/pumping-station.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "details",
+     "type": "bullets",
+     "content": {
+      "title": {
+       "hy": "Աշխատանքների շրջանակ",
+       "en": "Scope of work",
+       "ru": "Состав работ"
+      },
+      "items": [
+       {
+        "hy": "Սեղմած օդի մատակարարման կայաններ, խողովակաշարեր",
+        "en": "Compressed air supply stations and pipeline systems",
+        "ru": "Станции подачи сжатого воздуха и трубопроводные системы"
+       },
+       {
+        "hy": "Պոմպակայաններ, չժանգոտվող պողպատից խողովակաշար",
+        "en": "Pumping stations and stainless steel pipeline systems",
+        "ru": "Насосные станции и трубопроводы из нержавеющей стали"
+       },
+       {
+        "hy": "SCADA (հեռավար վերահսկման և տվյալների հավաքագրման ավտոմատացված համակարգեր) Siemens STEP 7-ի հիման վրա",
+        "en": "SCADA (Supervisory Control and Data Acquisition) automated systems based on the Siemens STEP 7 platform",
+        "ru": "Автоматизированные системы SCADA на базе платформы Siemens STEP 7"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "gallery",
+     "type": "gallery",
+     "content": {
+      "title": {
+       "hy": "Լուսանկարներ մեր աշխատանքներից",
+       "en": "From our work",
+       "ru": "Фотографии наших работ"
+      },
+      "images": [
+       {
+        "image": "/images/deck/industrial/compressed-air-station.webp",
+        "w": 1711,
+        "h": 1800,
+        "caption": {
+         "hy": "Սեղմած օդի մատակարարման կայաններ",
+         "en": "Compressed air supply stations",
+         "ru": "Станции подачи сжатого воздуха"
+        }
+       },
+       {
+        "image": "/images/deck/industrial/air-filter-line.webp",
+        "w": 1599,
+        "h": 610
+       },
+       {
+        "image": "/images/deck/industrial/aluminium-air-pipeline.webp",
+        "w": 805,
+        "h": 1400
+       },
+       {
+        "image": "/images/deck/industrial/pumping-station.webp",
+        "w": 1800,
+        "h": 1316,
+        "caption": {
+         "hy": "Պոմպակայաններ",
+         "en": "Pumping stations",
+         "ru": "Насосные станции"
+        }
+       },
+       {
+        "image": "/images/deck/industrial/ahu-piping.webp",
+        "w": 1005,
+        "h": 866
+       },
+       {
+        "image": "/images/deck/industrial/stainless-pump-skid.webp",
+        "w": 1261,
+        "h": 1600,
+        "caption": {
+         "hy": "Չժանգոտվող պողպատից խողովակաշար",
+         "en": "Stainless steel pipeline systems",
+         "ru": "Трубопроводы из нержавеющей стали"
+        }
+       },
+       {
+        "image": "/images/deck/industrial/stainless-tanks-control.webp",
+        "w": 1333,
+        "h": 911
+       },
+       {
+        "image": "/images/deck/industrial/pump-unit.webp",
+        "w": 1216,
+        "h": 1096
+       },
+       {
+        "image": "/images/deck/industrial/scada-cabinet-3.webp",
+        "w": 1077,
+        "h": 1600,
+        "caption": {
+         "hy": "SCADA համակարգեր",
+         "en": "SCADA systems",
+         "ru": "Системы SCADA"
+        }
+       },
+       {
+        "image": "/images/deck/industrial/scada-cabinet-1.webp",
+        "w": 702,
+        "h": 1365
+       },
+       {
+        "image": "/images/deck/industrial/scada-cabinet-2.webp",
+        "w": 758,
+        "h": 1400
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "led-displays",
+   "sort_order": 5,
+   "title": {
+    "hy": "Լուսադիոդային էկրաններ",
+    "en": "LED Display Systems",
+    "ru": "Светодиодные экраны"
+   },
+   "seo_title": {
+    "hy": "Լուսադիոդային էկրաններ",
+    "en": "LED Display Systems",
+    "ru": "Светодиодные экраны"
+   },
+   "seo_description": {
+    "hy": "Լուսադիոդային էկրաններ շենքերի ճակատների, համերգասրահների և առևտրային տարածքների համար։",
+    "en": "LED display systems for building façades, concert halls and commercial spaces.",
+    "ru": "Светодиодные экраны для фасадов зданий, концертных залов и коммерческих пространств."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "title": {
+       "hy": "Լուսադիոդային էկրաններ",
+       "en": "LED Display Systems",
+       "ru": "Светодиодные экраны"
+      },
+      "subtitle": {
+       "hy": "Լուսադիոդային էկրաններ շենքերի ճակատների, համերգասրահների և առևտրային տարածքների համար։",
+       "en": "LED display systems for building façades, concert halls and commercial spaces.",
+       "ru": "Светодиодные экраны для фасадов зданий, концертных залов и коммерческих пространств."
+      },
+      "image": "/images/deck/led/concert-hall-screen.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "details",
+     "type": "bullets",
+     "content": {
+      "title": {
+       "hy": "Աշխատանքների շրջանակ",
+       "en": "Scope of work",
+       "ru": "Состав работ"
+      },
+      "items": [
+       {
+        "hy": "Շենքերի ճակատային լուսադիոդային էկրաններ",
+        "en": "Façade LED screens for buildings",
+        "ru": "Светодиодные экраны для фасадов зданий"
+       },
+       {
+        "hy": "Բեմական և համերգասրահի էկրաններ",
+        "en": "Stage and concert hall screens",
+        "ru": "Экраны для сцен и концертных залов"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "gallery",
+     "type": "gallery",
+     "content": {
+      "title": {
+       "hy": "Լուսանկարներ մեր աշխատանքներից",
+       "en": "From our work",
+       "ru": "Фотографии наших работ"
+      },
+      "images": [
+       {
+        "image": "/images/deck/led/concert-hall-screen.webp",
+        "w": 1272,
+        "h": 1012
+       },
+       {
+        "image": "/images/deck/led/stage-screen.webp",
+        "w": 739,
+        "h": 427
+       },
+       {
+        "image": "/images/deck/led/rear-structure.webp",
+        "w": 1050,
+        "h": 1400
+       },
+       {
+        "image": "/images/deck/led/facade-installation-night.webp",
+        "w": 658,
+        "h": 1400
+       },
+       {
+        "image": "/images/deck/led/facade-installation-day.webp",
+        "w": 434,
+        "h": 604
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "refrigeration",
+   "sort_order": 6,
+   "title": {
+    "hy": "Սառնարանային սարքավորումներ",
+    "en": "Refrigeration and Cooling Equipment",
+    "ru": "Холодильное и охлаждающее оборудование"
+   },
+   "seo_title": {
+    "hy": "Սառնարանային սարքավորումներ",
+    "en": "Refrigeration and Cooling Equipment",
+    "ru": "Холодильное и охлаждающее оборудование"
+   },
+   "seo_description": {
+    "hy": "Սառնարանային սարքավորումներ՝ կոմպրեսորային ագրեգատներ, օդային հովացուցիչներ և կառավարման վահանակներ։",
+    "en": "Refrigeration and cooling equipment: compressor racks, air coolers and control panels.",
+    "ru": "Холодильное и охлаждающее оборудование: компрессорные агрегаты, воздухоохладители и панели управления."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "title": {
+       "hy": "Սառնարանային սարքավորումներ",
+       "en": "Refrigeration and Cooling Equipment",
+       "ru": "Холодильное и охлаждающее оборудование"
+      },
+      "subtitle": {
+       "hy": "Սառնարանային սարքավորումներ՝ կոմպրեսորային ագրեգատներ, օդային հովացուցիչներ և կառավարման վահանակներ։",
+       "en": "Refrigeration and cooling equipment: compressor racks, air coolers and control panels.",
+       "ru": "Холодильное и охлаждающее оборудование: компрессорные агрегаты, воздухоохладители и панели управления."
+      },
+      "image": "/images/deck/refrigeration/compressor-rack.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "details",
+     "type": "bullets",
+     "content": {
+      "title": {
+       "hy": "Աշխատանքների շրջանակ",
+       "en": "Scope of work",
+       "ru": "Состав работ"
+      },
+      "items": [
+       {
+        "hy": "Կոմպրեսորային ագրեգատներ",
+        "en": "Compressor racks",
+        "ru": "Компрессорные агрегаты"
+       },
+       {
+        "hy": "Օդային հովացուցիչներ",
+        "en": "Air coolers",
+        "ru": "Воздухоохладители"
+       },
+       {
+        "hy": "Կառավարման և ավտոմատացման վահանակներ",
+        "en": "Control and automation panels",
+        "ru": "Панели управления и автоматики"
+       },
+       {
+        "hy": "3D նախագծում",
+        "en": "3D design",
+        "ru": "3D-проектирование"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "gallery",
+     "type": "gallery",
+     "content": {
+      "title": {
+       "hy": "Լուսանկարներ մեր աշխատանքներից",
+       "en": "From our work",
+       "ru": "Фотографии наших работ"
+      },
+      "images": [
+       {
+        "image": "/images/deck/refrigeration/air-cooler.webp",
+        "w": 1600,
+        "h": 882
+       },
+       {
+        "image": "/images/deck/refrigeration/compressor-rack.webp",
+        "w": 1006,
+        "h": 709
+       },
+       {
+        "image": "/images/deck/refrigeration/compressor-heat-exchanger.webp",
+        "w": 1280,
+        "h": 960
+       },
+       {
+        "image": "/images/deck/refrigeration/condensing-unit.webp",
+        "w": 859,
+        "h": 744
+       },
+       {
+        "image": "/images/deck/refrigeration/refrigeration-rack.webp",
+        "w": 859,
+        "h": 1257
+       },
+       {
+        "image": "/images/deck/refrigeration/compressor-rack-control.webp",
+        "w": 1030,
+        "h": 528
+       },
+       {
+        "image": "/images/deck/refrigeration/refrigeration-control-panel.webp",
+        "w": 1138,
+        "h": 726
+       },
+       {
+        "image": "/images/deck/refrigeration/machine-room.webp",
+        "w": 932,
+        "h": 493
+       },
+       {
+        "image": "/images/deck/refrigeration/refrigeration-3d-model.webp",
+        "w": 639,
+        "h": 447
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "sheet-metal-processing",
+   "sort_order": 7,
+   "title": {
+    "hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
+    "en": "Full-Cycle Sheet Metal Processing",
+    "ru": "Полный цикл обработки листового металла"
+   },
+   "seo_title": {
+    "hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
+    "en": "Full-Cycle Sheet Metal Processing",
+    "ru": "Полный цикл обработки листового металла"
+   },
+   "seo_description": {
+    "hy": "Լազերային կտրում և եռակցում, ծալում և գլորում՝ բարձր ճշգրտության սարքավորումներով։",
+    "en": "Laser cutting and welding, bending and rolling on high-precision equipment.",
+    "ru": "Лазерная резка и сварка, гибка и вальцовка на высокоточном оборудовании."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "Գործունեության ոլորտները",
+       "en": "Areas of activity",
+       "ru": "Направления деятельности"
+      },
+      "title": {
+       "hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
+       "en": "Full-Cycle Sheet Metal Processing",
+       "ru": "Полный цикл обработки листового металла"
+      },
+      "subtitle": {
+       "hy": "Լազերային կտրում և եռակցում, ծալում և գլորում՝ բարձր ճշգրտության սարքավորումներով։",
+       "en": "Laser cutting and welding, bending and rolling on high-precision equipment.",
+       "ru": "Лазерная резка и сварка, гибка и вальцовка на высокоточном оборудовании."
+      },
+      "image": "/images/deck/metalworks/laser-cutting.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "details",
+     "type": "bullets",
+     "content": {
+      "title": {
+       "hy": "Աշխատանքների շրջանակ",
+       "en": "Scope of work",
+       "ru": "Состав работ"
+      },
+      "items": [
+       {
+        "hy": "Լազերային կտրում",
+        "en": "Laser cutting",
+        "ru": "Лазерная резка"
+       },
+       {
+        "hy": "Լազերային եռակցում",
+        "en": "Laser welding",
+        "ru": "Лазерная сварка"
+       },
+       {
+        "hy": "Թիթեղի ծալում",
+        "en": "Sheet bending",
+        "ru": "Гибка листа"
+       },
+       {
+        "hy": "Թիթեղի գլորում",
+        "en": "Plate rolling",
+        "ru": "Вальцовка листа"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "gallery",
+     "type": "gallery",
+     "content": {
+      "title": {
+       "hy": "Լուսանկարներ մեր աշխատանքներից",
+       "en": "From our work",
+       "ru": "Фотографии наших работ"
+      },
+      "images": [
+       {
+        "image": "/images/deck/metalworks/laser-cutting.webp",
+        "w": 2000,
+        "h": 1335
+       },
+       {
+        "image": "/images/deck/metalworks/laser-welding-station.webp",
+        "w": 1742,
+        "h": 1800
+       },
+       {
+        "image": "/images/deck/metalworks/laser-welding-wide.webp",
+        "w": 1697,
+        "h": 974
+       },
+       {
+        "image": "/images/deck/metalworks/laser-welding-detail.webp",
+        "w": 1413,
+        "h": 755
+       },
+       {
+        "image": "/images/deck/metalworks/press-brake-tooling.webp",
+        "w": 1800,
+        "h": 1658
+       },
+       {
+        "image": "/images/deck/metalworks/press-brake-operator.webp",
+        "w": 1600,
+        "h": 1452
+       },
+       {
+        "image": "/images/deck/metalworks/plate-rolling.webp",
+        "w": 2000,
+        "h": 1125
+       },
+       {
+        "image": "/images/deck/metalworks/plate-rolling-cnc.webp",
+        "w": 1800,
+        "h": 1350
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "customers",
+   "sort_order": 8,
+   "title": {
+    "hy": "Մեր պատվիրատուները",
+    "en": "Our customers",
+    "ru": "Наши заказчики"
+   },
+   "seo_title": {
+    "hy": "Մեր պատվիրատուները",
+    "en": "Our customers",
+    "ru": "Наши заказчики"
+   },
+   "seo_description": {
+    "hy": "Կազմակերպություններ, որոնց հետ համագործակցել է ԷլԴեսՔո-ն։",
+    "en": "Organizations that ELDESCO has worked with.",
+    "ru": "Организации, с которыми сотрудничала ELDESCO."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "ԷԼԴԵՍՔՈ ՍՊԸ",
+       "en": "ELDESCO LLC",
+       "ru": "ELDESCO LLC"
+      },
+      "title": {
+       "hy": "Մեր պատվիրատուները",
+       "en": "Our customers",
+       "ru": "Наши заказчики"
+      },
+      "subtitle": {
+       "hy": "Տարիների ընթացքում համագործակցել ենք հարյուրավոր փոքր, միջին և խոշոր կազմակերպությունների հետ։",
+       "en": "Over the years we have worked with hundreds of small, medium and large organizations.",
+       "ru": "За эти годы мы сотрудничали с сотнями малых, средних и крупных организаций."
+      },
+      "image": "/images/deck/power/panels-workshop.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "customers",
+     "type": "customers",
+     "content": {
+      "title": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      },
+      "subtitle": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      },
+      "items": [
+       {
+        "name": "VivaCell-MTS",
+        "logo": "/images/customers/vivacell-mts.webp"
+       },
+       {
+        "name": "Teghout Mining",
+        "logo": "/images/customers/teghout-mining.webp"
+       },
+       {
+        "name": "Apache",
+        "logo": "/images/customers/apache.webp"
+       },
+       {
+        "name": "Solar City",
+        "logo": "/images/customers/solar-city.webp"
+       },
+       {
+        "name": "Dalma Garden Mall",
+        "logo": "/images/customers/dalma-garden-mall.webp"
+       },
+       {
+        "name": "VEON",
+        "logo": "/images/customers/veon.webp"
+       },
+       {
+        "name": "Aqua Systems",
+        "logo": "/images/customers/aqua-systems.webp"
+       },
+       {
+        "name": "Aquatus",
+        "logo": "/images/customers/aquatus.webp"
+       },
+       {
+        "name": "Bekon Produkt",
+        "logo": "/images/customers/bekon-produkt.webp"
+       },
+       {
+        "name": "Dilijan Beer",
+        "logo": "/images/customers/dilijan-beer.webp"
+       },
+       {
+        "name": "EcoVille",
+        "logo": "/images/customers/ecoville.webp"
+       },
+       {
+        "name": "Gold's Gym",
+        "logo": "/images/customers/golds-gym.webp"
+       },
+       {
+        "name": "Teryan Residential Building",
+        "logo": "/images/customers/teryan.webp"
+       },
+       {
+        "name": "Yerevan Municipality",
+        "logo": "/images/customers/yerevan-municipality.webp"
+       },
+       {
+        "name": "Armada",
+        "logo": "/images/customers/armada.webp"
+       },
+       {
+        "name": "ArmLed",
+        "logo": "/images/customers/armled.webp"
+       },
+       {
+        "name": "Team Telecom Armenia",
+        "logo": "/images/customers/team-telecom-armenia.webp"
+       },
+       {
+        "name": "Customer logo",
+        "logo": "/images/customers/client-d.webp"
+       },
+       {
+        "name": "Armenia Wine",
+        "logo": "/images/customers/armenia-wine.webp"
+       },
+       {
+        "name": "ART Group",
+        "logo": "/images/customers/art-group.webp"
+       },
+       {
+        "name": "Karabakh Telecom",
+        "logo": "/images/customers/karabakh-telecom.webp"
+       },
+       {
+        "name": "IU Networks",
+        "logo": "/images/customers/iu-networks.webp"
+       },
+       {
+        "name": "Vallex Group",
+        "logo": "/images/customers/vallex-group.webp"
+       },
+       {
+        "name": "Pure Iron Plant CJSC",
+        "logo": "/images/customers/pure-iron-plant.webp"
+       },
+       {
+        "name": "Ashtarak",
+        "logo": "/images/customers/ashtarak.webp"
+       },
+       {
+        "name": "Mer Yerkri Kat",
+        "logo": "/images/customers/mer-yerkri-kat.webp"
+       },
+       {
+        "name": "SAGAMAR CJSC",
+        "logo": "/images/customers/sagamar.webp"
+       },
+       {
+        "name": "Synergy International Systems",
+        "logo": "/images/customers/synergy-international-systems.webp"
+       },
+       {
+        "name": "Synopsys",
+        "logo": "/images/customers/synopsys.webp"
+       },
+       {
+        "name": "Customer logo",
+        "logo": "/images/customers/client-medical.webp"
+       },
+       {
+        "name": "Akhtala Ore Processing Combine",
+        "logo": "/images/customers/akhtala-ore-processing.webp"
+       },
+       {
+        "name": "Prof AL",
+        "logo": "/images/customers/prof-al.webp"
+       },
+       {
+        "name": "Chanaparh",
+        "logo": "/images/customers/chanaparh.webp"
+       },
+       {
+        "name": "Cigaronne",
+        "logo": "/images/customers/cigaronne.webp"
+       },
+       {
+        "name": "Ohanyan Brandy Company",
+        "logo": "/images/customers/ohanyan-brandy.webp"
+       },
+       {
+        "name": "Astra Crystals",
+        "logo": "/images/customers/astra-crystals.webp"
+       }
+      ]
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "cta",
+     "type": "cta",
+     "content": {
+      "title": {
+       "hy": "Քննարկենք ձեր նախագիծը",
+       "en": "Let’s discuss your project",
+       "ru": "Обсудим ваш проект"
+      },
+      "description": {
+       "hy": "Զանգահարեք կամ գրեք մեզ՝ ուղղությունն ընտրելու և հնարավորությունները պարզելու համար։",
+       "en": "Call or write to us to choose a direction and clarify what is possible.",
+       "ru": "Позвоните или напишите нам, чтобы выбрать направление и уточнить возможности."
+      },
+      "cta_label": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "cta_url": "/contact"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "contact",
+   "sort_order": 9,
+   "title": {
+    "hy": "Կապ",
+    "en": "Contact",
+    "ru": "Контакты"
+   },
+   "seo_title": {
+    "hy": "Կապ մեզ հետ",
+    "en": "Contact us",
+    "ru": "Связаться с нами"
+   },
+   "seo_description": {
+    "hy": "Էլդեսքո ՍՊԸ՝ Երևան, Թբիլիսյան 35/9։ Հեռախոս, էլ. փոստ, կազմակերպության տվյալներ։",
+    "en": "ELDESCO LLC, 35/9 Tbilisyan Hwy, Yerevan. Phone, email and company details.",
+    "ru": "ELDESCO LLC, Ереван, Тбилисское шоссе 35/9. Телефон, email и реквизиты."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "ԷԼԴԵՍՔՈ ՍՊԸ",
+       "en": "ELDESCO LLC",
+       "ru": "ELDESCO LLC"
+      },
+      "title": {
+       "hy": "Կապ մեզ հետ",
+       "en": "Contact us",
+       "ru": "Связаться с нами"
+      },
+      "subtitle": {
+       "hy": "",
+       "en": "",
+       "ru": ""
+      },
+      "image": "/images/deck/power/busbar-riser-cabinet.webp"
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "contact",
+     "type": "contact",
+     "content": {
+      "title": {
+       "hy": "Զանգահարեք կամ գրեք մեզ",
+       "en": "Call or write to us",
+       "ru": "Позвоните или напишите нам"
+      },
+      "description": {
+       "hy": "Կպատասխանենք և կօգնենք ընտրել համապատասխան լուծումը։",
+       "en": "We will get back to you and help choose the right solution.",
+       "ru": "Мы ответим и поможем выбрать подходящее решение."
+      }
+     },
+     "is_enabled": true
+    },
+    {
+     "key": "company-details",
+     "type": "company_details",
+     "content": {
+      "title": {
+       "hy": "Կազմակերպության տվյալներ",
+       "en": "Company details",
+       "ru": "Реквизиты компании"
+      }
+     },
+     "is_enabled": true
+    }
+   ]
+  }
+ ]
+}
