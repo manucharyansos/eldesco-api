@@ -1,60 +1,27 @@
 # ELDESCO API
 
-REST API backend for ELDESCO LLC website built with Laravel 11 and PostgreSQL.
+REST API backend for ELDESCO LLC website built with Laravel.
 
 ## Requirements
 
-- PHP 8.2+
+- PHP 8.2+ (8.3 recommended) with the usual Laravel extensions
 - Composer
-- PostgreSQL 12+
-- Node.js 18+ (for frontend)
+- Local development: nothing else (SQLite). Production: MySQL 8 / MariaDB 10.6+
 
-## Installation
+## Quick start (local)
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/manucharyansos/eldesco-api.git
 cd eldesco-api
-```
-
-2. Install dependencies:
-```bash
 composer install
+composer setup     # .env, app key, SQLite database, migrations + seed, storage link
+composer dev       # API on http://127.0.0.1:8000/api
 ```
 
-3. Setup environment:
-```bash
-cp .env.example .env
-php artisan key:generate
-```
+Admin login: `admin@eldesco.am` and the `ELDESCO_ADMIN_PASSWORD` value from `.env`.
+Start the website next (`npm run dev` in `eldesco-client`).
 
-4. Configure database in `.env`:
-```
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=eldesco_db
-DB_USERNAME=eldesco_user
-DB_PASSWORD=your_password
-```
-
-5. Run migrations:
-```bash
-php artisan migrate
-```
-
-6. (Optional) Seed initial data:
-```bash
-php artisan db:seed
-```
-
-## Running the Server
-
-Development:
-```bash
-php artisan serve
-```
-
-The API will be available at `http://localhost:8000/api`
+**Production:** see [DEPLOY.md](DEPLOY.md) (nginx, PHP-FPM, MySQL, HTTPS, backups, updates).
 
 ## API Endpoints
 
@@ -80,7 +47,6 @@ Query Parameters:
 
 ### Authentication
 
-- `POST /api/auth/register` - Register new admin user
 - `POST /api/auth/login` - Login (returns Sanctum token)
 - `POST /api/auth/logout` - Logout (requires token)
 - `GET /api/auth/me` - Get current user (requires token)
@@ -166,45 +132,9 @@ curl -X POST http://localhost:8000/api/services \
 - `PUT /api/admin/site/navigation` - `{ "menus": { "header": [...], "footer": [...] } }`
 - `GET /api/admin/media`, `POST /api/admin/media`, `DELETE /api/admin/media/{id}`
 
-## Production deployment (https://api.eldesco.am)
+## Production deployment
 
-The website (https://eldesco.am) is a separate Next.js app; this API only serves JSON and uploaded images.
-
-```bash
-composer install --no-dev --optimize-autoloader
-cp .env.example .env            # then edit: APP_ENV=production, APP_DEBUG=false,
-php artisan key:generate        # APP_URL=https://api.eldesco.am, DB_*, ELDESCO_ADMIN_PASSWORD,
-                                # CORS_ALLOWED_ORIGINS=https://eldesco.am,https://www.eldesco.am
-php artisan migrate --force
-php artisan storage:link        # uploaded images are served from https://api.eldesco.am/storage/...
-php artisan db:seed --class=PresentationContentSeeder --force   # first deploy only, see below
-php artisan config:cache && php artisan route:cache
-```
-
-`PresentationContentSeeder` loads the pages, services, menus and photos from the company presentation.
-Site settings are only created when missing, but **pages, services and menus it manages are reset**
-to the presentation defaults - run it once, then edit everything from the admin panel.
-
-Nginx (PHP-FPM) example:
-
-```nginx
-server {
-    server_name api.eldesco.am;
-    root /var/www/eldesco-api/public;
-    index index.php;
-    client_max_body_size 12M;          # image uploads (limit is 10 MB per file)
-
-    location / { try_files $uri $uri/ /index.php?$query_string; }
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php8.3-fpm.sock;
-    }
-    location ~ /\.(?!well-known) { deny all; }
-}
-```
-
-Make sure `storage/` and `bootstrap/cache/` are writable by the PHP user, and issue the TLS certificate
-(for example `certbot --nginx -d api.eldesco.am`).
+See [DEPLOY.md](DEPLOY.md) for the full step-by-step guide for https://api.eldesco.am.
 
 ## Structure
 
