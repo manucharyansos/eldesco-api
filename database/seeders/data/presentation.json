@@ -195,6 +195,264 @@
    "key": "seo.og_image",
    "type": "image",
    "value": "/images/deck/power/switchboard-copper-3200kw.webp"
+  },
+  {
+   "group": "ui",
+   "key": "ui.learn_more",
+   "type": "localized",
+   "value": {"hy": "Մանրամասն", "en": "Learn more", "ru": "Подробнее"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.contact_us",
+   "type": "localized",
+   "value": {"hy": "Կապ մեզ հետ", "en": "Contact us", "ru": "Связаться с нами"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.call_us",
+   "type": "localized",
+   "value": {"hy": "Զանգահարել", "en": "Call us", "ru": "Позвонить"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.email_us",
+   "type": "localized",
+   "value": {"hy": "Գրել մեզ", "en": "Email us", "ru": "Написать"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.areas_of_activity",
+   "type": "localized",
+   "value": {"hy": "Գործունեության ոլորտները", "en": "Areas of activity", "ru": "Направления деятельности"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.navigation",
+   "type": "localized",
+   "value": {"hy": "Նավարկում", "en": "Navigation", "ru": "Навигация"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.services",
+   "type": "localized",
+   "value": {"hy": "Ծառայություններ", "en": "Services", "ru": "Услуги"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.contact",
+   "type": "localized",
+   "value": {"hy": "Կապ", "en": "Contact", "ru": "Контакты"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.company",
+   "type": "localized",
+   "value": {"hy": "Կազմակերպություն", "en": "Company", "ru": "Организация"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.bank",
+   "type": "localized",
+   "value": {"hy": "Բանկ", "en": "Bank", "ru": "Банк"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.bank_accounts",
+   "type": "localized",
+   "value": {"hy": "Հաշվարկային հաշիվներ", "en": "Bank accounts", "ru": "Расчетные счета"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.business_address",
+   "type": "localized",
+   "value": {"hy": "Գործ. հասցե", "en": "Business address", "ru": "Фактический адрес"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.legal_address",
+   "type": "localized",
+   "value": {"hy": "Իրավ. հասցե", "en": "Legal address", "ru": "Юридический адрес"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.phone",
+   "type": "localized",
+   "value": {"hy": "Հեռախոս", "en": "Phone", "ru": "Телефон"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.email",
+   "type": "localized",
+   "value": {"hy": "Էլ. փոստ", "en": "Email", "ru": "Эл. почта"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.director",
+   "type": "localized",
+   "value": {"hy": "Տնօրեն", "en": "Director", "ru": "Директор"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.chief_accountant",
+   "type": "localized",
+   "value": {"hy": "Գլխավոր հաշվապահ", "en": "Chief accountant", "ru": "Главный бухгалтер"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.tax_id",
+   "type": "localized",
+   "value": {"hy": "ՀՎՀՀ", "en": "Tax ID", "ru": "ИНН"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.registration",
+   "type": "localized",
+   "value": {"hy": "Պետ. ռեգ. գրանցման N", "en": "State registration no.", "ru": "Гос. регистрация №"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.all_projects",
+   "type": "localized",
+   "value": {"hy": "Բոլոր նախագծերը", "en": "All projects", "ru": "Все проекты"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.discuss_project",
+   "type": "localized",
+   "value": {"hy": "Քննարկել նախագիծը", "en": "Discuss a project", "ru": "Обсудить проект"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.projects_title",
+   "type": "localized",
+   "value": {"hy": "Նախագծեր", "en": "Projects", "ru": "Проекты"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.projects_subtitle",
+   "type": "localized",
+   "value": {
+    "hy": "Իրականացված ինժեներական լուծումներ՝ էներգետիկայից մինչև արտադրական ենթակառուցվածքներ։",
+    "en": "Delivered engineering solutions, from power infrastructure to industrial systems.",
+    "ru": "Реализованные инженерные решения - от энергетики до производственной инфраструктуры."
+   }
+  },
+  {
+   "group": "ui",
+   "key": "ui.team_title",
+   "type": "localized",
+   "value": {"hy": "Թիմ", "en": "Team", "ru": "Команда"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.news_title",
+   "type": "localized",
+   "value": {"hy": "Նորություններ", "en": "News", "ru": "Новости"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.read_more",
+   "type": "localized",
+   "value": {"hy": "Կարդալ ավելին", "en": "Read more", "ru": "Читать далее"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.skip_to_content",
+   "type": "localized",
+   "value": {"hy": "Անցնել բովանդակությանը", "en": "Skip to content", "ru": "Перейти к содержимому"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.open_menu",
+   "type": "localized",
+   "value": {"hy": "Բացել մենյուն", "en": "Open menu", "ru": "Открыть меню"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.close_menu",
+   "type": "localized",
+   "value": {"hy": "Փակել մենյուն", "en": "Close menu", "ru": "Закрыть меню"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.language",
+   "type": "localized",
+   "value": {"hy": "Լեզու", "en": "Language", "ru": "Язык"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.home",
+   "type": "localized",
+   "value": {"hy": "Գլխավոր էջ", "en": "Home", "ru": "Главная"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.next",
+   "type": "localized",
+   "value": {"hy": "Հաջորդը", "en": "Next", "ru": "Далее"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.previous",
+   "type": "localized",
+   "value": {"hy": "Նախորդը", "en": "Previous", "ru": "Назад"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.close",
+   "type": "localized",
+   "value": {"hy": "Փակել", "en": "Close", "ru": "Закрыть"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.gallery",
+   "type": "localized",
+   "value": {"hy": "Պատկերասրահ", "en": "Gallery", "ru": "Галерея"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.not_found_title",
+   "type": "localized",
+   "value": {"hy": "Էջը չի գտնվել", "en": "Page not found", "ru": "Страница не найдена"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.not_found_text",
+   "type": "localized",
+   "value": {
+    "hy": "Հասցեն սխալ է, կամ էջը հեռացվել է։",
+    "en": "The address is wrong or the page has been removed.",
+    "ru": "Адрес неверен или страница удалена."
+   }
+  },
+  {
+   "group": "ui",
+   "key": "ui.go_home",
+   "type": "localized",
+   "value": {"hy": "Անցնել գլխավոր էջ", "en": "Go to the home page", "ru": "Перейти на главную"}
+  },
+  {
+   "group": "ui",
+   "key": "ui.content_unavailable",
+   "type": "localized",
+   "value": {
+    "hy": "Բովանդակությունը ժամանակավորապես հասանելի չէ։",
+    "en": "Content is temporarily unavailable.",
+    "ru": "Содержимое временно недоступно."
+   }
+  },
+  {
+   "group": "ui",
+   "key": "ui.no_items",
+   "type": "localized",
+   "value": {"hy": "Այս բաժնում դեռ նյութեր չկան։", "en": "There is nothing here yet.", "ru": "Пока здесь ничего нет."}
+  },
+  {
+   "group": "ui",
+   "key": "ui.rights",
+   "type": "localized",
+   "value": {"hy": "Բոլոր իրավունքները պաշտպանված են", "en": "All rights reserved", "ru": "Все права защищены"}
   }
  ],
  "navigation": {
@@ -491,9 +749,9 @@
    "title_hy": "Լուսադիոդային էկրաններ",
    "title_en": "LED Display Systems",
    "title_ru": "Светодиодные экраны",
-   "description_hy": null,
-   "description_en": null,
-   "description_ru": null
+   "description_hy": "Շենքերի ճակատների, համերգասրահների և առևտրային տարածքների համար իրականացված լուսադիոդային էկրանների համակարգեր։",
+   "description_en": "Delivered LED display systems for building façades, concert halls and commercial spaces.",
+   "description_ru": "Реализованные системы светодиодных экранов для фасадов зданий, концертных залов и коммерческих пространств."
   },
   {
    "order_index": 5,
@@ -503,9 +761,83 @@
    "title_hy": "Թիթեղային մետաղի մշակման ամբողջական ցիկլ",
    "title_en": "Full-Cycle Sheet Metal Manufacturing",
    "title_ru": "Полный цикл обработки листового металла",
-   "description_hy": null,
-   "description_en": null,
-   "description_ru": null
+   "description_hy": "Լազերային կտրում և եռակցում, ծալում ու գլորում՝ ժամանակակից բարձր ճշգրտության սարքավորումներով։",
+   "description_en": "Laser cutting and welding, bending and rolling with modern high-precision equipment.",
+   "description_ru": "Лазерная резка и сварка, гибка и вальцовка на современном высокоточном оборудовании."
+  }
+ ],
+ "team": [
+  {
+   "name_hy": "Վահե Պարսամյան",
+   "name_en": "Vahe Parsamyan",
+   "name_ru": "Ваге Парсамян",
+   "position_hy": "Տնօրեն",
+   "position_en": "Director",
+   "position_ru": "Директор",
+   "image_url": null,
+   "email": null,
+   "order_index": 1
+  },
+  {
+   "name_hy": "Վահրամ Կիկոյան",
+   "name_en": "Vahram Kikoyan",
+   "name_ru": "Ваграм Кикоян",
+   "position_hy": "Գլխավոր հաշվապահ",
+   "position_en": "Chief Accountant",
+   "position_ru": "Главный бухгалтер",
+   "image_url": null,
+   "email": null,
+   "order_index": 2
+  }
+ ],
+ "news": [
+  {
+   "title_hy": "ELDESCO-ն՝ 2011 թվականից",
+   "title_en": "ELDESCO - engineering since 2011",
+   "title_ru": "ELDESCO - инженерные решения с 2011 года",
+   "slug_hy": "eldesco-2011-ic",
+   "slug_en": "eldesco-since-2011",
+   "slug_ru": "eldesco-s-2011-goda",
+   "content_hy": "Էլդեսքո ՍՊԸ-ն հիմնադրվել է 2011 թվականին։ Գործունեության ընդլայնման ընթացքում ընկերությունը համագործակցել է հարյուրավոր փոքր, միջին և խոշոր տնտեսավարողների հետ։ Մատուցված ծառայությունների բարձր որակը դարձել է երկարաժամկետ համագործակցության հիմքը։",
+   "content_en": "ELDESCO LLC was established in 2011. Throughout its operational growth, the company has partnered with hundreds of small, medium and large enterprises. The consistently high quality of its services has built long-term collaborations.",
+   "content_ru": "Компания ELDESCO LLC основана в 2011 году. По мере развития она сотрудничала с сотнями малых, средних и крупных предприятий. Стабильно высокое качество услуг стало основой долгосрочного партнерства.",
+   "excerpt_hy": "Էլդեսքո ՍՊԸ-ն 2011 թվականից համագործակցում է փոքր, միջին և խոշոր ընկերությունների հետ՝ ապահովելով բարձր որակի ինժեներական ծառայություններ։",
+   "excerpt_en": "Since 2011, ELDESCO has worked with small, medium and large enterprises, delivering consistently high-quality engineering services.",
+   "excerpt_ru": "С 2011 года ELDESCO работает с малыми, средними и крупными предприятиями, обеспечивая стабильно высокое качество инженерных услуг.",
+   "image_url": "/images/deck/power/substation-cabinets.webp",
+   "published": true
+  },
+  {
+   "title_hy": "Metalworks արտադրական ուղղության զարգացումը",
+   "title_en": "Development of the Metalworks production division",
+   "title_ru": "Развитие производственного направления Metalworks",
+   "slug_hy": "metalworks-artadrakan-uxxutyun",
+   "slug_en": "metalworks-production-division",
+   "slug_ru": "proizvodstvennoe-napravlenie-metalworks",
+   "content_hy": "Արտադրական հնարավորությունների ընդլայնման նպատակով 2023 թվականին ընկերությունը հիմնեց մետաղամշակման առանձին ուղղություն՝ «Մեթալորքս» ՍՊԸ։ Կարճ ժամանակահատվածում այն դիրքավորվեց որպես ոլորտի առաջատարներից մեկը Հայաստանում։ Արտասահմանյան գործընկերների հետ համագործակցության շնորհիվ ուղղությունը համալրվել է ժամանակակից բարձր ճշգրտության սարքավորումներով, որոնց մի մասը եզակի է ՀՀ-ում։",
+   "content_en": "In 2023, ELDESCO established a dedicated metal processing division, Metalworks LLC, to expand its production capabilities. Within a short period, it positioned itself among the industry leaders in Armenia. Cooperation with international partners brought advanced, high-precision machinery, some of which is unique in the country.",
+   "content_ru": "В 2023 году ELDESCO создала отдельное направление металлообработки - Metalworks LLC - для расширения производственных возможностей. За короткий срок оно вошло в число лидеров отрасли в Армении. Благодаря сотрудничеству с зарубежными партнерами направление оснащено современным высокоточным оборудованием, часть которого уникальна для страны.",
+   "excerpt_hy": "2023 թվականին հիմնված Metalworks ուղղությունը համալրված է ժամանակակից բարձր ճշգրտության մետաղամշակման սարքավորումներով։",
+   "excerpt_en": "Founded in 2023, the Metalworks division is equipped with modern, high-precision metal processing machinery.",
+   "excerpt_ru": "Основанное в 2023 году направление Metalworks оснащено современным высокоточным оборудованием для металлообработки.",
+   "image_url": "/images/deck/metalworks/laser-cutting.webp",
+   "published": true
+  },
+  {
+   "title_hy": "Գիտահետազոտական ուղղություն",
+   "title_en": "Research and development direction",
+   "title_ru": "Научно-исследовательское направление",
+   "slug_hy": "githetazotakan-uxxutyun",
+   "slug_en": "research-and-development-direction",
+   "slug_ru": "nauchno-issledovatelskoe-napravlenie",
+   "content_hy": "Էլդեսքո ՍՊԸ-ի առանձնակի ուղղություններից է գիտահետազոտական գործունեությունը՝ մեծ չափերի լազերային բյուրեղների և արհեստական թանկարժեք քարերի արտադրությամբ։",
+   "content_en": "One of ELDESCO LLC's distinctive directions is research and development, specializing in the production of large-size laser crystals and synthetic precious stones.",
+   "content_ru": "Одно из особых направлений ELDESCO LLC - научно-исследовательская деятельность, специализирующаяся на производстве крупноразмерных лазерных кристаллов и искусственных драгоценных камней.",
+   "excerpt_hy": "Մեծ չափերի լազերային բյուրեղների և արհեստական թանկարժեք քարերի արտադրության գիտահետազոտական ուղղություն։",
+   "excerpt_en": "Research and production of large-size laser crystals and synthetic precious stones.",
+   "excerpt_ru": "Исследования и производство крупноразмерных лазерных кристаллов и искусственных драгоценных камней.",
+   "image_url": null,
+   "published": true
   }
  ],
  "pages": [
@@ -542,10 +874,10 @@
        "en": "Design and production of energy infrastructure and engineering systems",
        "ru": "Проектирование и производство энергетической инфраструктуры и инженерных систем"
       },
-      "subtitle": {
-       "hy": "",
-       "en": "",
-       "ru": ""
+    "subtitle": {
+      "hy": "2011 թվականից՝ հարյուրավոր փոքր, միջին և խոշոր ընկերությունների վստահելի ինժեներական գործընկերը։",
+      "en": "A trusted engineering partner to hundreds of small, medium and large enterprises since 2011.",
+      "ru": "Надежный инженерный партнер сотен малых, средних и крупных предприятий с 2011 года."
       },
       "cta_label": {
        "hy": "Գործունեության ոլորտները",
@@ -969,9 +1301,9 @@
        "ru": "О нас"
       },
       "subtitle": {
-       "hy": "",
-       "en": "",
-       "ru": ""
+       "hy": "Էներգետիկ ենթակառուցվածքներ, արտադրական համակարգեր և բարձր ճշգրտության մետաղամշակում՝ 2011 թվականից։",
+       "en": "Power infrastructure, industrial systems and high-precision metal processing since 2011.",
+       "ru": "Энергетическая инфраструктура, производственные системы и высокоточная металлообработка с 2011 года."
       },
       "image": "/images/deck/power/panels-workshop.webp"
      },
@@ -1181,15 +1513,15 @@
      "key": "services",
      "type": "services",
      "content": {
-      "title": {
-       "hy": "",
-       "en": "",
-       "ru": ""
-      },
-      "subtitle": {
-       "hy": "",
-       "en": "",
-       "ru": ""
+     "title": {
+      "hy": "Մեր հիմնական ուղղությունները",
+      "en": "Our core areas",
+      "ru": "Наши основные направления"
+     },
+     "subtitle": {
+      "hy": "Հինգ փոխկապակցված ուղղություն՝ նախագծումից և արտադրությունից մինչև մոնտաժ ու գործարկում։",
+      "en": "Five connected areas, from design and production to installation and commissioning.",
+      "ru": "Пять взаимосвязанных направлений: от проектирования и производства до монтажа и ввода в эксплуатацию."
       }
      },
      "is_enabled": true
@@ -1394,6 +1726,66 @@
         "image": "/images/deck/power/converter-rack.webp",
         "w": 551,
         "h": 925
+       },
+       {
+        "image": "/images/deck/power/switchgear-busbar-trunking.webp",
+        "w": 495,
+        "h": 594,
+        "caption": {
+         "hy": "Բաշխիչ վահանակ և հաղորդադողային համակարգ",
+         "en": "Switchgear and busbar trunking system",
+         "ru": "Распределительный щит и шинопроводная система"
+        }
+       },
+       {
+        "image": "/images/deck/power/busbar-connections.webp",
+        "w": 720,
+        "h": 1280,
+        "caption": {
+         "hy": "Հաղորդադողերի միացումներ",
+         "en": "Busbar connections",
+         "ru": "Соединения шинопровода"
+        }
+       },
+       {
+        "image": "/images/deck/power/panel-internals.webp",
+        "w": 565,
+        "h": 1400,
+        "caption": {
+         "hy": "Բաշխիչ վահանակի ներքին կառուցվածք",
+         "en": "Distribution panel internals",
+         "ru": "Внутреннее устройство распределительного щита"
+        }
+       },
+       {
+        "image": "/images/deck/power/busbar-joints.webp",
+        "w": 748,
+        "h": 381,
+        "caption": {
+         "hy": "Հաղորդադողերի հանգույցներ",
+         "en": "Busbar joints",
+         "ru": "Шинные соединительные узлы"
+        }
+       },
+       {
+        "image": "/images/deck/power/busbar-riser.webp",
+        "w": 787,
+        "h": 1400,
+        "caption": {
+         "hy": "Ուղղահայաց հաղորդադողային գիծ",
+         "en": "Vertical busbar riser",
+         "ru": "Вертикальная линия шинопровода"
+        }
+       },
+       {
+        "image": "/images/deck/power/mv-cable-terminations.webp",
+        "w": 609,
+        "h": 910,
+        "caption": {
+         "hy": "Միջին լարման մալուխային վերջավորություններ",
+         "en": "Medium-voltage cable terminations",
+         "ru": "Концевые муфты кабелей среднего напряжения"
+        }
        }
       ]
      },
@@ -2055,8 +2447,52 @@
    ]
   },
   {
-   "slug": "customers",
+   "slug": "projects",
    "sort_order": 8,
+   "title": {
+    "hy": "Նախագծեր",
+    "en": "Projects",
+    "ru": "Проекты"
+   },
+   "seo_title": {
+    "hy": "ELDESCO-ի նախագծերը",
+    "en": "ELDESCO projects",
+    "ru": "Проекты ELDESCO"
+   },
+   "seo_description": {
+    "hy": "Իրականացված ինժեներական լուծումներ՝ էներգետիկ ենթակառուցվածքներից մինչև արտադրական համակարգեր, սառնարանային սարքավորումներ և մետաղամշակում։",
+    "en": "Delivered engineering solutions, from power infrastructure to industrial systems, refrigeration equipment and metal processing.",
+    "ru": "Реализованные инженерные решения: от энергетической инфраструктуры до производственных систем, холодильного оборудования и металлообработки."
+   },
+   "sections": [
+    {
+     "key": "page-hero",
+     "type": "page_hero",
+     "content": {
+      "eyebrow": {
+       "hy": "Մեր աշխատանքները",
+       "en": "Our work",
+       "ru": "Наши работы"
+      },
+      "title": {
+       "hy": "Իրականացված նախագծեր",
+       "en": "Delivered projects",
+       "ru": "Реализованные проекты"
+      },
+      "subtitle": {
+       "hy": "Էներգետիկ և արտադրական ենթակառուցվածքներ, լուսադիոդային էկրաններ, սառնարանային սարքավորումներ և թիթեղային մետաղի մշակում։",
+       "en": "Power and industrial infrastructure, LED display systems, refrigeration equipment and sheet metal processing.",
+       "ru": "Энергетическая и производственная инфраструктура, светодиодные экраны, холодильное оборудование и обработка листового металла."
+      },
+      "image": "/images/deck/power/switchboard-copper-3200kw.webp"
+     },
+     "is_enabled": true
+    }
+   ]
+  },
+  {
+   "slug": "customers",
+   "sort_order": 9,
    "title": {
     "hy": "Մեր պատվիրատուները",
     "en": "Our customers",
@@ -2100,15 +2536,15 @@
      "key": "customers",
      "type": "customers",
      "content": {
-      "title": {
-       "hy": "",
-       "en": "",
-       "ru": ""
-      },
-      "subtitle": {
-       "hy": "",
-       "en": "",
-       "ru": ""
+     "title": {
+      "hy": "Մեր պատվիրատուները",
+      "en": "Our customers",
+      "ru": "Наши заказчики"
+     },
+     "subtitle": {
+      "hy": "Հարյուրավոր փոքր, միջին և խոշոր կազմակերպությունների հետ ձևավորված երկարաժամկետ համագործակցություն։",
+      "en": "Long-term cooperation built with hundreds of small, medium and large organizations.",
+      "ru": "Долгосрочное сотрудничество с сотнями малых, средних и крупных организаций."
       },
       "items": [
        {
@@ -2286,7 +2722,7 @@
   },
   {
    "slug": "contact",
-   "sort_order": 9,
+   "sort_order": 10,
    "title": {
     "hy": "Կապ",
     "en": "Contact",
@@ -2318,9 +2754,9 @@
        "ru": "Связаться с нами"
       },
       "subtitle": {
-       "hy": "",
-       "en": "",
-       "ru": ""
+       "hy": "ՀՀ, ք․ Երևան, Թբիլիսյան 35/9 · +374 99 694 569 · eldesco@eldesco.am",
+       "en": "35/9 Tbilisyan Hwy, Yerevan, Armenia · +374 99 694 569 · eldesco@eldesco.am",
+       "ru": "Армения, Ереван, Тбилисское шоссе 35/9 · +374 99 694 569 · eldesco@eldesco.am"
       },
       "image": "/images/deck/power/busbar-riser-cabinet.webp"
      },

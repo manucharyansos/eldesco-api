@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Gallery;
+use App\Models\News;
 use App\Models\Page;
 use App\Models\Project;
 use App\Models\Service;
+use App\Models\TeamMember;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,13 +15,15 @@ use Illuminate\Support\Facades\DB;
  * Loads the website content derived from the ELDESCO company presentation
  * (database/seeders/data/presentation.json).
  *
- * Safe to run on a fresh database. On a live database it RESETS the pages,
- * services and menus it manages to the presentation defaults, so run it
- * once after deploying and edit everything else from the admin panel:
+ * Safe to run repeatedly. It synchronises every public database-backed
+ * content area with the presentation defaults: settings, navigation, pages,
+ * services, projects, team, news and gallery. Run it after deploying, then
+ * continue editing the content from the admin panel:
  *
  *   php artisan db:seed --class=PresentationContentSeeder --force
  *
- * Site settings are only created when missing - existing values are kept.
+ * Running it again intentionally restores the presentation defaults for the
+ * records managed by this seeder; unrelated records are left untouched.
  */
 class PresentationContentSeeder extends Seeder
 {
@@ -36,6 +41,9 @@ class PresentationContentSeeder extends Seeder
             $this->navigation($data['navigation']);
             $this->services($data['services']);
             $this->projects($data['projects']);
+            $this->team($data['team']);
+            $this->news($data['news']);
+            $this->gallery($data['services'], $data['pages']);
             $this->pages($data['pages']);
         });
     }
@@ -43,19 +51,17 @@ class PresentationContentSeeder extends Seeder
     private function settings(array $settings): void
     {
         foreach ($settings as $setting) {
-            if (DB::table('site_settings')->where('key', $setting['key'])->exists()) {
-                continue;
-            }
-
-            DB::table('site_settings')->insert([
-                'group' => $setting['group'],
-                'key' => $setting['key'],
-                'value' => $this->json($setting['value']),
-                'type' => $setting['type'] ?? 'text',
-                'is_public' => true,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
+            DB::table('site_settings')->updateOrInsert(
+                ['key' => $setting['key']],
+                [
+                    'group' => $setting['group'],
+                    'value' => $this->json($setting['value']),
+                    'type' => $setting['type'] ?? 'text',
+                    'is_public' => true,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ]
+            );
         }
     }
 
@@ -95,7 +101,7 @@ class PresentationContentSeeder extends Seeder
         foreach ($services as $service) {
             $model = Service::where('slug', $service['slug'])->first()
                 ?? Service::whereNull('slug')->where('order_index', $service['order_index'])->first()
-                ?? new Service();
+                ?? new Service;
 
             $model->fill($service)->save();
         }
@@ -104,17 +110,91 @@ class PresentationContentSeeder extends Seeder
     private function projects(array $projects): void
     {
         foreach ($projects as $project) {
-            $model = Project::where('title_en', $project['title_en'])->first();
+            Project::updateOrCreate(
+                ['title_en' => $project['title_en']],
+                $project
+            );
+        }
+    }
 
-            if (! $model) {
-                Project::create($project);
+    private function team(array $members): void
+    {
+        foreach ($members as $member) {
+            TeamMember::updateOrCreate(
+                ['name_hy' => $member['name_hy']],
+                $member
+            );
+        }
+    }
+
+    private function news(array $items): void
+    {
+        foreach ($items as $item) {
+            News::updateOrCreate(
+                ['slug_en' => $item['slug_en']],
+                $item
+            );
+        }
+    }
+
+    /**
+     * The public CMS galleries and the legacy /api/gallery endpoint use the
+     * same presentation photos. Build the gallery table from the five service
+     * page galleries so the image list has one source of truth.
+     */
+    private function gallery(array $services, array $pages): void
+    {
+        $serviceSlugs = array_column($services, 'slug');
+        $serviceTitles = [];
+        foreach ($services as $service) {
+            $serviceTitles[$service['slug']] = [
+                'hy' => $service['title_hy'],
+                'en' => $service['title_en'],
+                'ru' => $service['title_ru'],
+            ];
+        }
+
+        $rows = [];
+        $order = 1;
+
+        foreach ($pages as $page) {
+            if (! in_array($page['slug'], $serviceSlugs, true)) {
                 continue;
             }
 
-            if (! $model->image_url) {
-                $model->image_url = $project['image_url'];
-                $model->save();
+            foreach ($page['sections'] as $section) {
+                if (($section['type'] ?? null) !== 'gallery') {
+                    continue;
+                }
+
+                foreach ($section['content']['images'] ?? [] as $image) {
+                    $path = $image['image'] ?? null;
+                    if (! is_string($path) || $path === '' || isset($rows[$path])) {
+                        continue;
+                    }
+
+                    $caption = $image['caption'] ?? $image['alt'] ?? [];
+                    $fallback = $serviceTitles[$page['slug']];
+                    $rows[$path] = [
+                        'title_hy' => $caption['hy'] ?? $fallback['hy'],
+                        'title_en' => $caption['en'] ?? $fallback['en'],
+                        'title_ru' => $caption['ru'] ?? $fallback['ru'],
+                        'image_url' => $path,
+                        'thumbnail_url' => $path,
+                        'category' => $page['slug'],
+                        'order_index' => $order++,
+                    ];
+                }
             }
+        }
+
+        Gallery::query()
+            ->where('image_url', 'like', '/images/deck/%')
+            ->whereNotIn('image_url', array_keys($rows))
+            ->delete();
+
+        foreach ($rows as $path => $row) {
+            Gallery::updateOrCreate(['image_url' => $path], $row);
         }
     }
 
