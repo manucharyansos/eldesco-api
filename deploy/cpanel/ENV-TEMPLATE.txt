@@ -1,0 +1,30 @@
+APP_NAME="ELDESCO API"
+APP_ENV=production
+APP_KEY=
+APP_DEBUG=false
+APP_URL=https://api.eldesco.am
+APP_TIMEZONE=Asia/Yerevan
+APP_LOCALE=hy
+APP_FALLBACK_LOCALE=en
+
+LOG_CHANNEL=stack
+LOG_LEVEL=warning
+
+# SQLite: ոչ մի բազա ստեղծել պետք չէ, տվյալները պահվում են database/database.sqlite ֆայլում
+DB_CONNECTION=sqlite
+
+CACHE_STORE=file
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+SESSION_DOMAIN=null
+FILESYSTEM_DISK=public
+
+# Վերբեռնված նկարները գրվում են ուղիղ public/storage-ում (symlink պետք չէ)
+PUBLIC_DISK_ROOT=public/storage
+
+CORS_ALLOWED_ORIGINS=https://eldesco.am,https://www.eldesco.am
+SANCTUM_STATEFUL_DOMAINS=eldesco.am,www.eldesco.am
+
+# ԱԴՄԻՆԻ ՄՈՒՏՔԸ. սա կստեղծվի seed-ի ժամանակ (մեկ անգամ)։ ՓՈԽԵՔ գաղտնաբառը երկար և եզակի արժեքով
+ELDESCO_ADMIN_EMAIL=admin@eldesco.am
+ELDESCO_ADMIN_PASSWORD=ՓՈԽԵՔ_ԱՅՍ_ԳԱՂՏՆԱԲԱՌԸ

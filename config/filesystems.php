@@ -11,7 +11,9 @@ return [
         ],
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            // On shared hosting (no symlinks) set PUBLIC_DISK_ROOT=public/storage: files are then written
+            // straight into the web root and `php artisan storage:link` is not needed.
+            'root' => env('PUBLIC_DISK_ROOT') ? base_path(env('PUBLIC_DISK_ROOT')) : storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,

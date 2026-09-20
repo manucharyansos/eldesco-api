@@ -3,6 +3,8 @@
 Tested layout: Ubuntu 22.04 / 24.04, nginx, PHP 8.3-FPM, MySQL 8 (or MariaDB 10.6+).
 The website (https://eldesco.am) is a separate app - see `eldesco-client/DEPLOY.md`.
 
+> **cPanel / shared hosting?** Use [deploy/cpanel/README.md](deploy/cpanel/README.md) instead (no root access, SQLite, no Composer on the server).
+
 ## 1. Server packages
 
 ```bash
