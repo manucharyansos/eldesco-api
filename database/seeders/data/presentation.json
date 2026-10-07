@@ -2787,7 +2787,22 @@
        "hy": "Կազմակերպության տվյալներ",
        "en": "Company details",
        "ru": "Реквизиты компании"
-      }
+      },
+      "rows": [
+       {"is_visible": true, "label": {"hy": "Կազմակերպություն", "en": "Company", "ru": "Организация"}, "source": "company.name", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "ՀՎՀՀ", "en": "Tax ID", "ru": "ИНН"}, "source": "company.tax_id", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Պետ. գրանցման համար", "en": "Registration number", "ru": "Регистрационный номер"}, "source": "company.registration", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Գործնական հասցե", "en": "Business address", "ru": "Фактический адрес"}, "source": "contact.business_address", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Իրավ. հասցե", "en": "Legal address", "ru": "Юридический адрес"}, "source": "contact.legal_address", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Բանկ", "en": "Bank", "ru": "Банк"}, "source": "bank.name", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Հաշվարկային հաշիվ (AMD)", "en": "Bank account (AMD)", "ru": "Расчётный счёт (AMD)"}, "source": "bank.account_amd", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Հաշվարկային հաշիվ (USD)", "en": "Bank account (USD)", "ru": "Расчётный счёт (USD)"}, "source": "bank.account_usd", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Հաշվարկային հաշիվ (EUR)", "en": "Bank account (EUR)", "ru": "Расчётный счёт (EUR)"}, "source": "bank.account_eur", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Հեռախոս", "en": "Phone", "ru": "Телефон"}, "source": "contact.phone", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Էլ. փոստ", "en": "Email", "ru": "Эл. почта"}, "source": "contact.email", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Տնօրեն", "en": "Director", "ru": "Директор"}, "source": "company.director", "value": {"hy": "", "en": "", "ru": ""}},
+       {"is_visible": true, "label": {"hy": "Հաշվապահ", "en": "Chief accountant", "ru": "Главный бухгалтер"}, "source": "company.chief_accountant", "value": {"hy": "", "en": "", "ru": ""}}
+      ]
      },
      "is_enabled": true
     }
